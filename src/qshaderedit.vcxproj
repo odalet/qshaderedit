@@ -1,0 +1,1737 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{52881896-6A3E-37DE-89ED-BF48881B7592}</ProjectGUID>
+    <WindowsTargetPlatformVersion>10.0.10586.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>qshaderedit</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">qshaderedit.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">qshaderedit</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">qshaderedit.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">qshaderedit</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">qshaderedit.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">qshaderedit</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">qshaderedit.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">qshaderedit</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\completer;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\extern\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\completer;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\extern\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\completer;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\extern\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;glu32.lib;opengl32.lib;..\..\extern\glew\lib\glew32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/Debug/qshaderedit.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/Debug/qshaderedit.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\completer;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\extern\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\completer;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\extern\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\completer;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\extern\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;glu32.lib;opengl32.lib;..\..\extern\glew\lib\glew32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/Release/qshaderedit.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/Release/qshaderedit.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\completer;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\extern\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\completer;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\extern\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\completer;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\extern\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;glu32.lib;opengl32.lib;..\..\extern\glew\lib\glew32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/MinSizeRel/qshaderedit.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/MinSizeRel/qshaderedit.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\completer;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\extern\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\completer;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\extern\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\completer;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\extern\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;glu32.lib;opengl32.lib;..\..\extern\glew\lib\glew32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/RelWithDebInfo/qshaderedit.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/RelWithDebInfo/qshaderedit.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\DEV\CMake\bin\cmake.exe -HD:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master -BD:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build --check-stamp-file D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/CMakeLists.txt;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\CMakeLists.txt;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qshaderedit.qrc;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\DEV\CMake\bin\cmake.exe -HD:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master -BD:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build --check-stamp-file D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/CMakeLists.txt;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\CMakeLists.txt;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qshaderedit.qrc;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\DEV\CMake\bin\cmake.exe -HD:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master -BD:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build --check-stamp-file D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/CMakeLists.txt;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\CMakeLists.txt;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qshaderedit.qrc;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\DEV\CMake\bin\cmake.exe -HD:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master -BD:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build --check-stamp-file D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/CMakeLists.txt;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\CMakeLists.txt;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qshaderedit.qrc;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_editor.cpp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_editor.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_editor.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_editor.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\editor.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_editor.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_editor.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_editor.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_editor.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\editor.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_editor.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_editor.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_editor.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_editor.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\editor.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_editor.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_editor.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_editor.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_editor.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\editor.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_editor.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_highlighter.cpp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_highlighter.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_highlighter.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_highlighter.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\highlighter.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_highlighter.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_highlighter.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_highlighter.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_highlighter.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\highlighter.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_highlighter.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_highlighter.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_highlighter.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_highlighter.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\highlighter.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_highlighter.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_highlighter.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_highlighter.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_highlighter.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\highlighter.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_highlighter.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_messagepanel.cpp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_messagepanel.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_messagepanel.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_messagepanel.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\messagepanel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_messagepanel.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_messagepanel.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_messagepanel.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_messagepanel.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\messagepanel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_messagepanel.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_messagepanel.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_messagepanel.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_messagepanel.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\messagepanel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_messagepanel.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_messagepanel.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_messagepanel.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_messagepanel.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\messagepanel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_messagepanel.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_parameterpanel.cpp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_parameterpanel.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_parameterpanel.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_parameterpanel.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameterpanel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_parameterpanel.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_parameterpanel.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_parameterpanel.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_parameterpanel.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameterpanel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_parameterpanel.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_parameterpanel.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_parameterpanel.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_parameterpanel.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameterpanel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_parameterpanel.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_parameterpanel.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_parameterpanel.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_parameterpanel.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameterpanel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_parameterpanel.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_parameterdelegate.cpp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_parameterdelegate.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_parameterdelegate.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_parameterdelegate.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameterdelegate.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_parameterdelegate.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_parameterdelegate.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_parameterdelegate.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_parameterdelegate.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameterdelegate.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_parameterdelegate.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_parameterdelegate.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_parameterdelegate.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_parameterdelegate.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameterdelegate.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_parameterdelegate.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_parameterdelegate.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_parameterdelegate.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_parameterdelegate.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameterdelegate.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_parameterdelegate.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_parametermodel.cpp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_parametermodel.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_parametermodel.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_parametermodel.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parametermodel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_parametermodel.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_parametermodel.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_parametermodel.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_parametermodel.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parametermodel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_parametermodel.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_parametermodel.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_parametermodel.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_parametermodel.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parametermodel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_parametermodel.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_parametermodel.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_parametermodel.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_parametermodel.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parametermodel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_parametermodel.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_scenepanel.cpp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_scenepanel.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_scenepanel.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_scenepanel.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\scenepanel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_scenepanel.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_scenepanel.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_scenepanel.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_scenepanel.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\scenepanel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_scenepanel.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_scenepanel.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_scenepanel.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_scenepanel.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\scenepanel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_scenepanel.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_scenepanel.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_scenepanel.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_scenepanel.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\scenepanel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_scenepanel.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_qglview.cpp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_qglview.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_qglview.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_qglview.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qglview.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_qglview.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_qglview.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_qglview.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_qglview.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qglview.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_qglview.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_qglview.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_qglview.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_qglview.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qglview.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_qglview.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_qglview.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_qglview.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_qglview.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qglview.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_qglview.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_newdialog.cpp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_newdialog.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_newdialog.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_newdialog.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\newdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_newdialog.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_newdialog.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_newdialog.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_newdialog.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\newdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_newdialog.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_newdialog.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_newdialog.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_newdialog.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\newdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_newdialog.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_newdialog.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_newdialog.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_newdialog.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\newdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_newdialog.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_finddialog.cpp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_finddialog.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_finddialog.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_finddialog.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\finddialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_finddialog.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_finddialog.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_finddialog.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_finddialog.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\finddialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_finddialog.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_finddialog.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_finddialog.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_finddialog.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\finddialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_finddialog.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_finddialog.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_finddialog.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_finddialog.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\finddialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_finddialog.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_gotodialog.cpp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_gotodialog.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_gotodialog.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_gotodialog.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\gotodialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_gotodialog.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_gotodialog.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_gotodialog.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_gotodialog.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\gotodialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_gotodialog.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_gotodialog.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_gotodialog.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_gotodialog.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\gotodialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_gotodialog.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_gotodialog.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_gotodialog.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_gotodialog.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\gotodialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_gotodialog.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_effect.cpp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_effect.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_effect.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_effect.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\effect.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_effect.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_effect.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_effect.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_effect.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\effect.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_effect.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_effect.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_effect.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_effect.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\effect.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_effect.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_effect.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_effect.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_effect.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\effect.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_effect.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_document.cpp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_document.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_document.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_document.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\document.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_document.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_document.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_document.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_document.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\document.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_document.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_document.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_document.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_document.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\document.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_document.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_document.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_document.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_document.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\document.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_document.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_qshaderedit.cpp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_qshaderedit.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_qshaderedit.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_qshaderedit.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qshaderedit.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_qshaderedit.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_qshaderedit.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_qshaderedit.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_qshaderedit.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qshaderedit.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_qshaderedit.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_qshaderedit.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_qshaderedit.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_qshaderedit.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qshaderedit.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_qshaderedit.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_qshaderedit.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+C:\DEV\Qt\5.7\msvc2015\bin\moc.exe @D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/moc_qshaderedit.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/CMakeFiles/b2669c910fccbb7c503f5bfa9774935a/moc_qshaderedit.cpp.rule;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qshaderedit.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_qshaderedit.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\newdialog.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_newdialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\DEV\Qt\5.7\msvc2015\bin\uic.exe -o D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/ui_newdialog.h D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/newdialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/newdialog.ui;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\newdialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_newdialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_newdialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\DEV\Qt\5.7\msvc2015\bin\uic.exe -o D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/ui_newdialog.h D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/newdialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/newdialog.ui;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\newdialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_newdialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_newdialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\DEV\Qt\5.7\msvc2015\bin\uic.exe -o D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/ui_newdialog.h D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/newdialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/newdialog.ui;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\newdialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_newdialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_newdialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\DEV\Qt\5.7\msvc2015\bin\uic.exe -o D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/ui_newdialog.h D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/newdialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/newdialog.ui;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\newdialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_newdialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameterpropertiesdialog.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_parameterpropertiesdialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\DEV\Qt\5.7\msvc2015\bin\uic.exe -o D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/ui_parameterpropertiesdialog.h D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/parameterpropertiesdialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/parameterpropertiesdialog.ui;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameterpropertiesdialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_parameterpropertiesdialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_parameterpropertiesdialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\DEV\Qt\5.7\msvc2015\bin\uic.exe -o D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/ui_parameterpropertiesdialog.h D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/parameterpropertiesdialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/parameterpropertiesdialog.ui;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameterpropertiesdialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_parameterpropertiesdialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_parameterpropertiesdialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\DEV\Qt\5.7\msvc2015\bin\uic.exe -o D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/ui_parameterpropertiesdialog.h D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/parameterpropertiesdialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/parameterpropertiesdialog.ui;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameterpropertiesdialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_parameterpropertiesdialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_parameterpropertiesdialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\DEV\Qt\5.7\msvc2015\bin\uic.exe -o D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/ui_parameterpropertiesdialog.h D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/parameterpropertiesdialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/parameterpropertiesdialog.ui;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameterpropertiesdialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_parameterpropertiesdialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\texturepropertiesdialog.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_texturepropertiesdialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\DEV\Qt\5.7\msvc2015\bin\uic.exe -o D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/ui_texturepropertiesdialog.h D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/texturepropertiesdialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/texturepropertiesdialog.ui;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\texturepropertiesdialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_texturepropertiesdialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_texturepropertiesdialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\DEV\Qt\5.7\msvc2015\bin\uic.exe -o D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/ui_texturepropertiesdialog.h D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/texturepropertiesdialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/texturepropertiesdialog.ui;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\texturepropertiesdialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_texturepropertiesdialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_texturepropertiesdialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\DEV\Qt\5.7\msvc2015\bin\uic.exe -o D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/ui_texturepropertiesdialog.h D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/texturepropertiesdialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/texturepropertiesdialog.ui;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\texturepropertiesdialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_texturepropertiesdialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_texturepropertiesdialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\DEV\Qt\5.7\msvc2015\bin\uic.exe -o D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/ui_texturepropertiesdialog.h D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/texturepropertiesdialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/texturepropertiesdialog.ui;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\texturepropertiesdialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_texturepropertiesdialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\finddialog.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_finddialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\DEV\Qt\5.7\msvc2015\bin\uic.exe -o D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/ui_finddialog.h D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/finddialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/finddialog.ui;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\finddialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_finddialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_finddialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\DEV\Qt\5.7\msvc2015\bin\uic.exe -o D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/ui_finddialog.h D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/finddialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/finddialog.ui;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\finddialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_finddialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_finddialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\DEV\Qt\5.7\msvc2015\bin\uic.exe -o D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/ui_finddialog.h D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/finddialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/finddialog.ui;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\finddialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_finddialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_finddialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\DEV\Qt\5.7\msvc2015\bin\uic.exe -o D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/ui_finddialog.h D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/finddialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/finddialog.ui;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\finddialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_finddialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\gotodialog.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_gotodialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\DEV\Qt\5.7\msvc2015\bin\uic.exe -o D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/ui_gotodialog.h D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/gotodialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/gotodialog.ui;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\gotodialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_gotodialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_gotodialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\DEV\Qt\5.7\msvc2015\bin\uic.exe -o D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/ui_gotodialog.h D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/gotodialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/gotodialog.ui;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\gotodialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_gotodialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_gotodialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\DEV\Qt\5.7\msvc2015\bin\uic.exe -o D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/ui_gotodialog.h D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/gotodialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/gotodialog.ui;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\gotodialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_gotodialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_gotodialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\DEV\Qt\5.7\msvc2015\bin\uic.exe -o D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/ui_gotodialog.h D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/gotodialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/gotodialog.ui;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\gotodialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_gotodialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qshaderedit.qrc">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating qrc_qshaderedit.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\DEV\Qt\5.7\msvc2015\bin\rcc.exe --name qshaderedit --output D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/qrc_qshaderedit.cpp D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/qshaderedit.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/qshaderedit.qrc;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\default.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\filenew.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\fileopen.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\filesave.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\editundo.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\editredo.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\editcut.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\editcopy.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\editpaste.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\find.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\filenew.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\fileopen.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\filesave.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\editundo.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\editredo.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\editcut.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\editcopy.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\editpaste.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\find.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\toolbutton.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\colorpicker.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qshaderedit.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\qrc_qshaderedit.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating qrc_qshaderedit.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\DEV\Qt\5.7\msvc2015\bin\rcc.exe --name qshaderedit --output D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/qrc_qshaderedit.cpp D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/qshaderedit.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/qshaderedit.qrc;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\default.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\filenew.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\fileopen.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\filesave.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\editundo.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\editredo.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\editcut.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\editcopy.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\editpaste.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\find.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\filenew.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\fileopen.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\filesave.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\editundo.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\editredo.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\editcut.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\editcopy.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\editpaste.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\find.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\toolbutton.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\colorpicker.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qshaderedit.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\qrc_qshaderedit.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating qrc_qshaderedit.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\DEV\Qt\5.7\msvc2015\bin\rcc.exe --name qshaderedit --output D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/qrc_qshaderedit.cpp D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/qshaderedit.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/qshaderedit.qrc;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\default.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\filenew.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\fileopen.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\filesave.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\editundo.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\editredo.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\editcut.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\editcopy.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\editpaste.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\find.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\filenew.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\fileopen.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\filesave.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\editundo.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\editredo.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\editcut.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\editcopy.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\editpaste.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\find.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\toolbutton.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\colorpicker.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qshaderedit.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\qrc_qshaderedit.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating qrc_qshaderedit.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\DEV\Qt\5.7\msvc2015\bin\rcc.exe --name qshaderedit --output D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/src/qrc_qshaderedit.cpp D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/qshaderedit.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/src/qshaderedit.qrc;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\default.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\filenew.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\fileopen.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\filesave.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\editundo.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\editredo.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\editcut.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\editcopy.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\editpaste.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\mac\find.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\filenew.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\fileopen.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\filesave.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\editundo.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\editredo.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\editcut.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\editcopy.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\editpaste.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\win\find.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\toolbutton.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\images\colorpicker.png;D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qshaderedit.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\qrc_qshaderedit.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\effect.h" />
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\editor.h" />
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\highlighter.h" />
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\messagepanel.h" />
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameterpanel.h" />
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameter.h" />
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parametermodel.h" />
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameterdelegate.h" />
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\scenepanel.h" />
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qglview.h" />
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\newdialog.h" />
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\texmanager.h" />
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\outputparser.h" />
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\scene.h" />
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\finddialog.h" />
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\gotodialog.h" />
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\glutils.h" />
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\imageplugin.h" />
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\cgexplicit.h" />
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\document.h" />
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qshaderedit.h" />
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_newdialog.h" />
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_parameterpropertiesdialog.h" />
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_texturepropertiesdialog.h" />
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_finddialog.h" />
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_gotodialog.h" />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\effect.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\glsleffect.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\asmeffect.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\cgfxeffect.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\editor.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\highlighter.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\messagepanel.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameterpanel.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameter.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parametermodel.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameterdelegate.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\scenepanel.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qglview.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\teapot.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\newdialog.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\texmanager.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\outputparser.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\scene.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\finddialog.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\gotodialog.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\glutils.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\imageplugin.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\cgexplicit.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\document.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\main.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qshaderedit.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_editor.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_highlighter.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_messagepanel.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_parameterpanel.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_parameterdelegate.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_parametermodel.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_scenepanel.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_qglview.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_newdialog.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_finddialog.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_gotodialog.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_effect.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_document.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_qshaderedit.cpp"  />
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\qrc_qshaderedit.cpp"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:/HOME/3D/DOWNLOADED/QShaderEdit/qshaderedit-master/build/ZERO_CHECK.vcxproj">
+      <Project>39D47F9B-20E3-3567-A8CD-0B27506D5B91</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

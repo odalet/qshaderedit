@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qshaderedit", "src\qshaderedit.vcxproj", "{52881896-6A3E-37DE-89ED-BF48881B7592}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		MinSizeRel|Win32 = MinSizeRel|Win32
+		RelWithDebInfo|Win32 = RelWithDebInfo|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52881896-6A3E-37DE-89ED-BF48881B7592}.Debug|Win32.ActiveCfg = Debug|Win32
+		{52881896-6A3E-37DE-89ED-BF48881B7592}.Debug|Win32.Build.0 = Debug|Win32
+		{52881896-6A3E-37DE-89ED-BF48881B7592}.Release|Win32.ActiveCfg = Release|Win32
+		{52881896-6A3E-37DE-89ED-BF48881B7592}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

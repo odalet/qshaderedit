@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\effect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\glsleffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\asmeffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\cgfxeffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\editor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\highlighter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\messagepanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameterpanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parametermodel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameterdelegate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\scenepanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qglview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\teapot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\newdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\texmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\outputparser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\finddialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\gotodialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\glutils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\imageplugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\cgexplicit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\document.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qshaderedit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_editor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_highlighter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_messagepanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_parameterpanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_parameterdelegate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_parametermodel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_scenepanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_qglview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_newdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_finddialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_gotodialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_effect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_document.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_qshaderedit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\qrc_qshaderedit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\effect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\editor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\highlighter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\messagepanel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameterpanel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parametermodel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameterdelegate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\scenepanel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qglview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\newdialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\texmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\outputparser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\finddialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\gotodialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\glutils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\imageplugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\cgexplicit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\document.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qshaderedit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_newdialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_parameterpropertiesdialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_texturepropertiesdialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_finddialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_gotodialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\CMakeLists.txt" />
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_editor.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_highlighter.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_messagepanel.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_parameterpanel.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_parameterdelegate.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_parametermodel.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_scenepanel.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_qglview.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_newdialog.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_finddialog.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_gotodialog.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_effect.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_document.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_qshaderedit.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\newdialog.ui" />
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameterpropertiesdialog.ui" />
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\texturepropertiesdialog.ui" />
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\finddialog.ui" />
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\gotodialog.ui" />
+    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qshaderedit.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{59DFAE4D-2F0F-3118-BE1B-3A69B96F0DF0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{76815E9E-3FB9-36E7-A993-72FC8FBDEA2D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{CCABF862-9D84-3640-83D5-A5C583FF7864}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
