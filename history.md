@@ -1,0 +1,49 @@
+## 0.2.1 (2016/08/04)
+
+* Ported to Qt5.7 / VS 2015 / Win32 
+
+----
+
+Original ChangeLog
+
+## 0.2.0	
+* Add new look view, styles.
+* Add Shader manager.
+* Add preferences text editor.
+* Fix fatal error when open again documment or create new.
+* Add simple code autocomplete.
+* Add new icons, splashscreen.
+
+## 0.1.3
+* Add support for obj files.
+* Add icons.
+* Add texture and scene paths to settings.
+* Obj mesh scene plugin and mtl support.
+* New improved parameter panel.
+* Move document handling to its own class.
+* Fix double compilation bug.
+* Don't stop rendering when compilation fails.
+* Save texture paths as relative paths.
+
+## 0.1.2
+* Improved syntax highlighting by Lars Uebernickel <larsuebernickel@gmx.de>.
+* Improved 3d view manipulation.
+* Message panel improvements by Lars.
+* Improved parameter panel, dynamic updates, color preview and sliders by Lars.
+* Add recent files menu.
+* Add parameter color picker by Lars.
+* Add support for texture parameters.
+* Add initial support for multiple scenes.
+
+## 0.1.1
+* Reorganize sources to create debian packages.
+* Add runtime check for the presence of cgfx.
+* Fix set parameters in cgfx.
+* Fix paste not being enabled.
+* Integrate patches from Karl Robillard <krobillard@san.rr.com> to save
+* settings and enable drag and drop.
+* Add partial support for ARB assembly vertex and fragment programs.
+
+## 0.1.0
+* First public release!
+

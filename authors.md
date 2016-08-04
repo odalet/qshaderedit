@@ -1,0 +1,10 @@
+Current author: Olivier Dalet <odalet@gmail.com>
+
+----
+
+Original Authors:
+
+* Ignacio Castanyo <castanyo@yahoo.es>
+* Karl Robillard <wickedsmoke@users.sf.net>
+* Lars Uebernickel <larsuebernickel@gmx.de>
+* Peter Komar <marcusk@i.ua>
