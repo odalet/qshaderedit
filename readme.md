@@ -5,7 +5,9 @@ The differences are:
 	* CMake and Linux supports were dropped (no more CMakeLists.txt not #if Linux in code)
 * Code layout was modified and many files were deleted.
 * Currently build with Visual Studio 2015.
-* Depends on Qt 5.7 (built against VS 2015 x86 runtime). 
+* Depends on Qt 5.7 (built against VS 2015 x86 runtime).
+ 
+**NB**: all development is made in the `qt5_vs2015` branch. `master` was left untouched (apart from this readme).  
 
 ----
 Original README:
