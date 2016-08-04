@@ -23,16 +23,16 @@
 #include "parametermodel.h"
 #include "parameterdelegate.h"
 
-#include <QtGui/QHeaderView>
+#include <QtWidgets/QHeaderView>
 
 
-ParameterPanel::ParameterPanel(const QString & title, QWidget * parent /*= 0*/, Qt::WFlags flags /*= 0*/) :
+ParameterPanel::ParameterPanel(const QString & title, QWidget * parent /*= 0*/, Qt::WindowFlags flags /*= 0*/) :
 		QDockWidget(title, parent, flags), m_model(NULL), m_delegate(NULL), m_view(NULL)
 {
 	initWidget();
 }
 
-ParameterPanel::ParameterPanel(QWidget * parent /*= 0*/, Qt::WFlags flags /*= 0*/) :
+ParameterPanel::ParameterPanel(QWidget * parent /*= 0*/, Qt::WindowFlags flags /*= 0*/) :
 		QDockWidget(parent, flags), m_model(NULL), m_delegate(NULL), m_view(NULL)
 {
 	initWidget();
@@ -69,7 +69,7 @@ void ParameterPanel::initWidget()
 	m_view->setModel(m_model);
 	m_view->setItemDelegate(m_delegate);
 	m_view->header()->setStretchLastSection(true);
-	m_view->header()->setClickable(false);
+	m_view->header()->setSectionsClickable(false);
 	m_view->setAlternatingRowColors(true);
 	m_view->setEditTriggers(QAbstractItemView::AllEditTriggers);
 	m_view->setTextElideMode(Qt::ElideMiddle);

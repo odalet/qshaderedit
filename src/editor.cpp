@@ -25,13 +25,13 @@
 #include "effect.h"
 
 #include <QtCore/QDebug>
-#include <QtGui/QTabBar>
-#include <QtGui/QTextEdit>
+#include <QtWidgets/QTabBar>
+#include <QtWidgets/QTextEdit>
 #include <QtGui/QTextCursor>
 #include <QtGui/QTextLayout>
 #include <QtGui/QTextBlock>
 //#include <QtGui/QTextDocument>
-#include <QtGui/QMessageBox>
+#include <QtWidgets/QMessageBox>
 #include <QtGui/QPainter>
 
 

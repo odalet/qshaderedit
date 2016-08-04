@@ -14,7 +14,7 @@
 #include <QtGui/QPaintEvent>
 #include <QtGui/QMouseEvent>
 #include <QtGui/QPixmap>
-#include <QtGui/QDockWidget>
+#include <QtWidgets/QDockWidget>
 #include <QtGui/QPainter>
 
 TitleBar::TitleBar(QWidget *parent)

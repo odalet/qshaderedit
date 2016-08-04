@@ -1,6 +1,6 @@
 /*
     QShaderEdit - Simple multiplatform shader editor
-    Copyright (C) 2008 Rômulo Fernandes <abra185@gmail.com>
+    Copyright (C) 2008 Rï¿½mulo Fernandes <abra185@gmail.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -24,9 +24,9 @@
 
 #include <QtCore/QString>
 #include <QtCore/QFile>
-#include <QtGui/QFileDialog>
-#include <QtGui/QAction>
-#include <QtGui/QMenu>
+#include <QtWidgets/QFileDialog>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QMenu>
 
 #include <GL/glew.h>
 #include <fstream>

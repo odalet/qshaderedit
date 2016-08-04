@@ -21,7 +21,7 @@
 #ifndef DELEGATE_H
 #define DELEGATE_H
 
-#include <QtGui/QItemDelegate>
+#include <QtWidgets/QItemDelegate>
 #include "ui_texturepropertiesdialog.h"
 #include "texmanager.h"
 

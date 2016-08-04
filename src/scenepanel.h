@@ -20,7 +20,7 @@
 #ifndef SCENEPANEL_H
 #define SCENEPANEL_H
 
-#include <QtGui/QDockWidget>
+#include <QtWidgets/QDockWidget>
 
 class QTimer;
 class QGLWidget;
@@ -34,7 +34,7 @@ class ScenePanel : public QDockWidget
 	Q_OBJECT
 public:
 
-	ScenePanel(const QString & title, QWidget * parent = 0, QGLWidget * shareWidget = 0, Qt::WFlags flags = 0);
+	ScenePanel(const QString & title, QWidget * parent = 0, QGLWidget * shareWidget = 0, Qt::WindowFlags flags = 0);
 	~ScenePanel();
 
 	void setEffect(Effect * effect);

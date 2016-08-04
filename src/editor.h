@@ -21,9 +21,9 @@
 #ifndef EDITOR_H
 #define EDITOR_H
 
-#include <QtGui/QTabWidget>
+#include <QtWidgets/QTabWidget>
 #include <QtGui/QTextDocument>
-#include <QtGui/QTextEdit>
+#include <QtWidgets/QTextEdit>
 
 class QTextEdit;
 

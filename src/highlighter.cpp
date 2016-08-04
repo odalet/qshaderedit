@@ -19,6 +19,8 @@
 
 #include "highlighter.h"
 
+#define DARK_THEME
+
 // static
 QVector<QTextCharFormat> Highlighter::s_formats;
 
@@ -52,6 +54,39 @@ void Highlighter::createFormats()
 	QTextCharFormat format;
 	//format.setFont(QFont("Monospace", 8));
 
+#ifdef DARK_THEME
+
+	format.setForeground(Qt::cyan);
+	format.setFontWeight(QFont::Bold);
+	s_formats[Keyword] = format;
+	format.setFontWeight(QFont::Normal);
+
+	format.setForeground(Qt::red);
+	s_formats[DataType] = format;
+
+	format.setForeground(Qt::cyan);
+	s_formats[BuiltinVar] = format;
+
+	format.setForeground(Qt::cyan);
+	format.setFontWeight(QFont::Bold);
+	s_formats[BuiltinFunction] = format;
+	format.setFontWeight(QFont::Normal);
+
+	format.setForeground(Qt::yellow);
+	s_formats[Number] = format;
+
+	format.setForeground(Qt::green);
+	s_formats[String] = format;
+
+	format.setFontItalic(true);
+	format.setForeground(Qt::lightGray);
+	s_formats[Comment] = format;
+
+	format.setFontItalic(false);
+	format.setForeground(Qt::darkYellow);
+	s_formats[Misc] = format;
+#else
+	
 	format.setForeground(Qt::darkBlue);
 	format.setFontWeight(QFont::Bold);
 	s_formats[Keyword] = format;
@@ -81,6 +116,7 @@ void Highlighter::createFormats()
 	format.setFontItalic(false);
 	format.setForeground(Qt::darkYellow);
 	s_formats[Misc] = format;
+#endif
 }
 
 void Highlighter::highlightBlock(const QString& text)

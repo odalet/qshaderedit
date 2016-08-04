@@ -20,7 +20,7 @@
 #ifndef FINDDIALOG_H
 #define FINDDIALOG_H
 
-#include <QtGui/QDialog>
+#include <QtWidgets/QDialog>
 
 #include "ui_finddialog.h"
 

@@ -26,9 +26,9 @@
 
 #include <QtCore/QString>
 #include <QtCore/QFile>
-#include <QtGui/QFileDialog>
-#include <QtGui/QAction>
-#include <QtGui/QMenu>
+#include <QtWidgets/QFileDialog>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QMenu>
 
 #include <math.h>
 

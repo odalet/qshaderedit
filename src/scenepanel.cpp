@@ -20,14 +20,14 @@
 #include "scenepanel.h"
 
 #include <QtCore/QTimer>
-#include <QtGui/QMenu>
-#include <QtGui/QAction>
+#include <QtWidgets/QMenu>
+#include <QtWidgets/QAction>
 
 #include "qglview.h"
 #include "scene.h"
 
 
-ScenePanel::ScenePanel(const QString & title, QWidget * parent /*= 0*/, QGLWidget * shareWidget /*= 0*/, Qt::WFlags flags /*= 0*/) :
+ScenePanel::ScenePanel(const QString & title, QWidget * parent /*= 0*/, QGLWidget * shareWidget /*= 0*/, Qt::WindowFlags flags /*= 0*/) :
 	QDockWidget(title, parent, flags), m_view(NULL)
 {
 	m_view = new SceneView(this, shareWidget);

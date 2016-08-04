@@ -165,15 +165,18 @@ bool ParameterModel::setData(const QModelIndex &index, const QVariant &value, in
 
 void ParameterModel::clear()
 {
+	beginResetModel();
 	m_effect = NULL;
-	reset();
+	endResetModel();
 }
 
 void ParameterModel::setEffect(Effect * effect)
 {
 	Q_ASSERT(effect != NULL);
+
+	beginResetModel();
 	m_effect = effect;
-	reset();
+	endResetModel();
 }
 
 Parameter* ParameterModel::parameter(const QModelIndex& index) const

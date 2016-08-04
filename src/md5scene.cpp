@@ -309,7 +309,7 @@ void md5Scene::draw(Effect* effect) const
 		
 void md5Scene::load(QString filename)
 {
-	parsingFile file(filename.toAscii().data());
+    parsingFile file(filename.toLatin1().data());
 	
 	const char* token;
 	const char* param;

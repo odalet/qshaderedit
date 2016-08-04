@@ -21,8 +21,8 @@
 #ifndef PARAMETERPANEL_H
 #define PARAMETERPANEL_H
 
-#include <QtGui/QDockWidget>
-#include <QtGui/QTreeView>
+#include <QtWidgets/QDockWidget>
+#include <QtWidgets/QTreeView>
 
 class Effect;
 class ParameterModel;
@@ -34,8 +34,8 @@ class ParameterPanel : public QDockWidget
 	Q_OBJECT
 public:
 
-	ParameterPanel(const QString & title, QWidget * parent = 0, Qt::WFlags flags = 0);
-	ParameterPanel(QWidget * parent = 0, Qt::WFlags flags = 0);
+	ParameterPanel(const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0);
+	ParameterPanel(QWidget * parent = 0, Qt::WindowFlags flags = 0);
 	~ParameterPanel();
 
 	virtual QSize sizeHint() const;

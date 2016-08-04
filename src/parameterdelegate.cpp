@@ -23,18 +23,18 @@
 #include "parametermodel.h"
 #include "imageplugin.h" // supportedFormats
 
-#include <QtGui/QHeaderView>
-#include <QtGui/QDoubleSpinBox>
-#include <QtGui/QLineEdit>
-#include <QtGui/QHBoxLayout>
-#include <QtGui/QToolButton>
-#include <QtGui/QFileDialog>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QDoubleSpinBox>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QToolButton>
+#include <QtWidgets/QFileDialog>
 #include <QtGui/QPainter>
 #include <QtGui/QKeyEvent>
-#include <QtGui/QLabel>
-#include <QtGui/QColorDialog>
-#include <QtGui/QComboBox>
-#include <QtGui/QSpinBox>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QColorDialog>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QSpinBox>
 
 #include "ui_parameterpropertiesdialog.h"
 

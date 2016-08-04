@@ -581,7 +581,7 @@ public:
 		emit infoMessage(tr("Compiling cg effect..."));
 		
 		QString includeOption = "-I" + m_effectPath;
-		const char * options[] = { includeOption.toAscii(), NULL };
+		const char * options[] = { includeOption.toLatin1(), NULL };
 		
 		CGeffect effect = qcgCreateEffect(m_context, m_effectText.data(), options);
 		

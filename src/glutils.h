@@ -20,6 +20,9 @@
 #ifndef GLUTILS_H
 #define GLUTILS_H
 
+// ODT
+#define _USE_MATH_DEFINES // So that we have M_PI
+
 #include <GL/glew.h>
 
 #include <math.h>

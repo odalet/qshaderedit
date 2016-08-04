@@ -20,7 +20,7 @@
 #ifndef MESSAGEPANEL_H
 #define MESSAGEPANEL_H
 
-#include <QtGui/QDockWidget>
+#include <QtWidgets/QDockWidget>
 
 class QTextEdit;
 class OutputParser;
@@ -37,8 +37,8 @@ public:
 		Error
 	};
 
-	MessagePanel(const QString & title, QWidget * parent = 0, Qt::WFlags flags = 0);
-	MessagePanel(QWidget * parent = 0, Qt::WFlags flags = 0);
+	MessagePanel(const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0);
+	MessagePanel(QWidget * parent = 0, Qt::WindowFlags flags = 0);
 	~MessagePanel();
 
 	virtual QSize sizeHint() const;

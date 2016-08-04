@@ -22,7 +22,7 @@
 
 #include <QtCore/Qt>
 #include <QtGui/QKeyEvent>
-#include <QtGui/QTextEdit>
+#include <QtWidgets/QTextEdit>
 #include <QtGui/QTextBlock>
 #include <QtGui/QTextCursor>
 
@@ -40,13 +40,13 @@ public:
 };
 
 
-MessagePanel::MessagePanel(const QString & title, QWidget * parent /*= 0*/, Qt::WFlags flags /*= 0*/) :
+MessagePanel::MessagePanel(const QString & title, QWidget * parent /*= 0*/, Qt::WindowFlags flags /*= 0*/) :
 	QDockWidget(title, parent, flags), m_log(NULL)
 {
 	initWidget();
 }
 
-MessagePanel::MessagePanel(QWidget * parent /*= 0*/, Qt::WFlags flags /*= 0*/) :
+MessagePanel::MessagePanel(QWidget * parent /*= 0*/, Qt::WindowFlags flags /*= 0*/) :
 	QDockWidget(parent, flags), m_log(NULL)
 {
 	initWidget();

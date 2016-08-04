@@ -206,7 +206,7 @@ REGISTER_IMAGE_PLUGIN(QtImagePlugin);
 
 
 #define STBI_NO_HDR
-#include "stb_image.c"
+#include "stb_image.h"
 
 class StbImagePlugin : public ImagePlugin
 {
@@ -230,7 +230,7 @@ class StbImagePlugin : public ImagePlugin
 		Q_ASSERT(obj != 0);
 		Q_ASSERT(target != NULL);
 
-		QByteArray name = fileName.toAscii();
+		QByteArray name = fileName.toLatin1();
 
 		int w, h, comp;
 		unsigned char * data = stbi_load(name.data(), &w, &h, &comp, 4);

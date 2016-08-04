@@ -24,8 +24,8 @@
 #include <QtCore/QFile>
 #include <QtCore/QTimer>
 #include <QtCore/QUrl>
-#include <QtGui/QMessageBox>
-#include <QtGui/QFileDialog>
+#include <QtWidgets/QMessageBox>
+#include <QtWidgets/QFileDialog>
 
 namespace
 {
@@ -454,6 +454,9 @@ bool Document::saveEffect()
 	emit titleChanged(title());
 	
 	//updateActions();				// qshaderedit listens to modifiedChanged
+
+	// ODT
+	return true; 
 }
 
 

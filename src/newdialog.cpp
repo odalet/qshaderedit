@@ -2,8 +2,7 @@
 #include "newdialog.h"
 #include "effect.h"
 
-
-NewDialog::NewDialog(QWidget *parent/*=0*/, bool startup/*=false*/) : QDialog(parent)
+NewDialog::NewDialog(QWidget* parent, bool startup) : QDialog(parent)
 {
 	ui.setupUi(this);
 	
@@ -32,12 +31,6 @@ NewDialog::NewDialog(QWidget *parent/*=0*/, bool startup/*=false*/) : QDialog(pa
 	}
 }
 
-QString NewDialog::shaderType() const
-{
-	return ui.listWidget->currentItem()->text();
-}
+QString NewDialog::shaderType() const { return ui.listWidget->currentItem()->text(); }
 
-void NewDialog::openEffect()
-{
-	done(OpenEffect);
-}
+void NewDialog::openEffect() { done(OpenEffect); }

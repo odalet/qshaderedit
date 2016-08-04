@@ -12,7 +12,7 @@
 #ifndef TITLEBAR_H
 #define TITLEBAR_H
 
-#include <QtGui/QWidget>
+#include <QtWidgets/QWidget>
 
 /**
 	@author Peter <marcusk@i.ua>

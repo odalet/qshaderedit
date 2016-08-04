@@ -18,7 +18,7 @@
 */
 
 #include "finddialog.h"
-#include <QtGui/QLineEdit>
+#include <QtWidgets/QLineEdit>
 
 FindDialog::FindDialog(QWidget *parent/*=0*/, bool forward/*=true*/) : QDialog(parent)
 {

@@ -20,7 +20,7 @@
 #ifndef GOTODIALOG_H
 #define GOTODIALOG_H
 
-#include <QtGui/QDialog>
+#include <QtWidgets/QDialog>
 
 #include "ui_gotodialog.h"
 

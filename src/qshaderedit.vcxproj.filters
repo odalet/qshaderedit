@@ -1,270 +1,407 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\effect.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\glsleffect.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\asmeffect.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\cgfxeffect.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\editor.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\highlighter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\messagepanel.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameterpanel.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parametermodel.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameterdelegate.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\scenepanel.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qglview.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\teapot.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\newdialog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\texmanager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\outputparser.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\scene.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\finddialog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\gotodialog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\glutils.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\imageplugin.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\cgexplicit.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\document.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qshaderedit.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_editor.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_highlighter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_messagepanel.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_parameterpanel.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_parameterdelegate.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_parametermodel.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_scenepanel.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_qglview.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_newdialog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_finddialog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_gotodialog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_effect.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_document.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\moc_qshaderedit.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\qrc_qshaderedit.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\effect.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\editor.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\highlighter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\messagepanel.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameterpanel.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parametermodel.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameterdelegate.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\scenepanel.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qglview.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\newdialog.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\texmanager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\outputparser.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\scene.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\finddialog.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\gotodialog.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\glutils.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\imageplugin.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\cgexplicit.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\document.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qshaderedit.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_newdialog.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_parameterpropertiesdialog.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_texturepropertiesdialog.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_finddialog.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\src\ui_gotodialog.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\CMakeLists.txt" />
-    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_editor.cpp.rule">
-      <Filter>CMake Rules</Filter>
-    </CustomBuild>
-    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_highlighter.cpp.rule">
-      <Filter>CMake Rules</Filter>
-    </CustomBuild>
-    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_messagepanel.cpp.rule">
-      <Filter>CMake Rules</Filter>
-    </CustomBuild>
-    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_parameterpanel.cpp.rule">
-      <Filter>CMake Rules</Filter>
-    </CustomBuild>
-    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_parameterdelegate.cpp.rule">
-      <Filter>CMake Rules</Filter>
-    </CustomBuild>
-    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_parametermodel.cpp.rule">
-      <Filter>CMake Rules</Filter>
-    </CustomBuild>
-    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_scenepanel.cpp.rule">
-      <Filter>CMake Rules</Filter>
-    </CustomBuild>
-    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_qglview.cpp.rule">
-      <Filter>CMake Rules</Filter>
-    </CustomBuild>
-    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_newdialog.cpp.rule">
-      <Filter>CMake Rules</Filter>
-    </CustomBuild>
-    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_finddialog.cpp.rule">
-      <Filter>CMake Rules</Filter>
-    </CustomBuild>
-    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_gotodialog.cpp.rule">
-      <Filter>CMake Rules</Filter>
-    </CustomBuild>
-    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_effect.cpp.rule">
-      <Filter>CMake Rules</Filter>
-    </CustomBuild>
-    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_document.cpp.rule">
-      <Filter>CMake Rules</Filter>
-    </CustomBuild>
-    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\build\CMakeFiles\b2669c910fccbb7c503f5bfa9774935a\moc_qshaderedit.cpp.rule">
-      <Filter>CMake Rules</Filter>
-    </CustomBuild>
-    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\newdialog.ui" />
-    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\parameterpropertiesdialog.ui" />
-    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\texturepropertiesdialog.ui" />
-    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\finddialog.ui" />
-    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\gotodialog.ui" />
-    <CustomBuild Include="D:\HOME\3D\DOWNLOADED\QShaderEdit\qshaderedit-master\src\qshaderedit.qrc" />
-  </ItemGroup>
-  <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{59DFAE4D-2F0F-3118-BE1B-3A69B96F0DF0}</UniqueIdentifier>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{76815E9E-3FB9-36E7-A993-72FC8FBDEA2D}</UniqueIdentifier>
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="CMake Rules">
-      <UniqueIdentifier>{CCABF862-9D84-3640-83D5-A5C583FF7864}</UniqueIdentifier>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{c578af01-e0b5-4e27-9082-01d1d9be7e49}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{e0debbcb-f1a9-430f-b7ed-5083ce90f0c9}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="asmeffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cgexplicit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cgfxeffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="document.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="editor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="effect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="finddialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="glsleffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="glutils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gotodialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="highlighter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="imageplugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="md5scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="messagepanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="newdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="outputparser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="parameter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="parameterdelegate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="parametermodel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="parameterpanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qglview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qshaderedit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scenepanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="teapot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="texmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="titlebar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_document.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_document.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_editor.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_editor.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_effect.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_effect.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_finddialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_finddialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_gotodialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_gotodialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_highlighter.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_highlighter.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_messagepanel.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_messagepanel.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_newdialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_newdialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_parameterdelegate.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_parameterdelegate.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_parametermodel.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_parametermodel.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_parameterpanel.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_parameterpanel.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_qglview.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_qglview.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_qshaderedit.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_qshaderedit.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_scenepanel.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_scenepanel.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_titlebar.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_titlebar.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_qshaderedit.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cgexplicit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="document.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="editor.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="effect.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="finddialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="glutils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="gotodialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="highlighter.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="imageplugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="md5scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="messagepanel.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="newdialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="outputparser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="parameter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="parameterdelegate.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="parametermodel.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="parameterpanel.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="qglview.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="qshaderedit.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="scenepanel.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="texmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="titlebar.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="GeneratedFiles\ui_finddialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_gotodialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_newdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_parameterpropertiesdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_texturepropertiesdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stb_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="finddialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="gotodialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="newdialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="parameterpropertiesdialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="texturepropertiesdialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="qshaderedit.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="images\default.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\mac\filenew.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\mac\fileopen.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\mac\filesave.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\mac\editundo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\mac\editredo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\mac\editcut.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\mac\editcopy.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\mac\editpaste.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\mac\find.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\win\filenew.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\win\fileopen.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\win\filesave.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\win\editundo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\win\editredo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\win\editcut.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\win\editcopy.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\win\editpaste.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\win\find.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\toolbutton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\colorpicker.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
