@@ -6,405 +6,486 @@
       <Extensions>ui</Extensions>
       <ParseFiles>false</ParseFiles>
     </Filter>
-    <Filter Include="Form Files">
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Theming">
+      <UniqueIdentifier>{e16376d4-d701-48db-8ae4-da3bb97954e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{12b2f90c-519c-44b9-a1f3-dcb036df55af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\MainWindow">
+      <UniqueIdentifier>{2a818091-01bc-487b-ab39-ec297c11a638}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_to_sort">
+      <UniqueIdentifier>{456c83d1-76df-4816-acb4-4ef493dea099}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_to_sort\Form Files">
       <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
       <Extensions>ui</Extensions>
       <ParseFiles>false</ParseFiles>
     </Filter>
-    <Filter Include="Generated Files">
+    <Filter Include="_to_sort\Generated Files">
       <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
       <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
     </Filter>
-    <Filter Include="Generated Files">
-      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
-      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Generated Files\Debug">
+    <Filter Include="_to_sort\Generated Files\Debug">
       <UniqueIdentifier>{c578af01-e0b5-4e27-9082-01d1d9be7e49}</UniqueIdentifier>
       <Extensions>cpp;moc</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
-    <Filter Include="Generated Files\Release">
+    <Filter Include="_to_sort\Generated Files\Release">
       <UniqueIdentifier>{e0debbcb-f1a9-430f-b7ed-5083ce90f0c9}</UniqueIdentifier>
       <Extensions>cpp;moc</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
-    <Filter Include="Resource Files">
+    <Filter Include="_to_sort\Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="_to_sort\Header Files\Effects">
+      <UniqueIdentifier>{754f336e-3bbd-4347-9f94-52a825bd394e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_to_sort\Header Files\UI">
+      <UniqueIdentifier>{9ce9fac1-c9e1-4971-bf00-3e566755d91a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_to_sort\Header Files\UI\Dialogs">
+      <UniqueIdentifier>{3d245ffc-3743-488e-94f7-025350f57459}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_to_sort\Header Files\GL">
+      <UniqueIdentifier>{fe9602ea-ee35-48ba-8a58-365b895deb0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_to_sort\Header Files\Parameters">
+      <UniqueIdentifier>{5cb8d3ac-d5fa-4fb9-a262-b59a77a2bf6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_to_sort\Header Files\Images">
+      <UniqueIdentifier>{fab5a77d-0180-42af-acf0-b8984e2ad48a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_to_sort\Header Files\Document">
+      <UniqueIdentifier>{4694c7fa-23f1-4e8d-bd71-946a750c9ef3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_to_sort\Resource Files">
       <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
       <Extensions>qrc;*</Extensions>
       <ParseFiles>false</ParseFiles>
     </Filter>
-    <Filter Include="Source Files\Effects">
+    <Filter Include="_to_sort\Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="_to_sort\Source Files\Effects">
       <UniqueIdentifier>{9de85a06-c2dd-41e7-b79f-643818449fdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_to_sort\Source Files\UI">
+      <UniqueIdentifier>{b8283240-5ecc-43a1-8a4c-e9e0d5cb0f2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_to_sort\Source Files\UI\Dialogs">
+      <UniqueIdentifier>{de944e71-b772-4044-afc2-52591bceb6ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_to_sort\Source Files\GL">
+      <UniqueIdentifier>{6cde2ab1-99ae-4fdd-881f-3f51fdf8fc0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_to_sort\Source Files\Parameters">
+      <UniqueIdentifier>{782af0e1-0988-46ba-b78b-acb097ef4fd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_to_sort\Source Files\Images">
+      <UniqueIdentifier>{bb74dba8-adf5-4e08-ad3b-da46659d78ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_to_sort\Source Files\Document">
+      <UniqueIdentifier>{69f5117e-ca38-4eda-8b4b-c05ea43a656e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services">
+      <UniqueIdentifier>{3fea7b98-d5ca-4869-b964-507e1e000640}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="document.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="editor.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="finddialog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="glutils.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="gotodialog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="highlighter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="imageplugin.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="md5scene.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="messagepanel.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="newdialog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="outputparser.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="parameter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="parameterdelegate.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="parametermodel.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="parameterpanel.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="qglview.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="qshaderedit.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="scene.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="scenepanel.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="teapot.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="texmanager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="titlebar.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Debug\moc_document.cpp">
-      <Filter>Generated Files\Debug</Filter>
+      <Filter>_to_sort\Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="Release\moc_document.cpp">
-      <Filter>Generated Files\Release</Filter>
+      <Filter>_to_sort\Generated Files\Release</Filter>
     </ClCompile>
     <ClCompile Include="Debug\moc_editor.cpp">
-      <Filter>Generated Files\Debug</Filter>
+      <Filter>_to_sort\Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="Release\moc_editor.cpp">
-      <Filter>Generated Files\Release</Filter>
+      <Filter>_to_sort\Generated Files\Release</Filter>
     </ClCompile>
     <ClCompile Include="Debug\moc_effect.cpp">
-      <Filter>Generated Files\Debug</Filter>
+      <Filter>_to_sort\Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="Release\moc_effect.cpp">
-      <Filter>Generated Files\Release</Filter>
+      <Filter>_to_sort\Generated Files\Release</Filter>
     </ClCompile>
     <ClCompile Include="Debug\moc_finddialog.cpp">
-      <Filter>Generated Files\Debug</Filter>
+      <Filter>_to_sort\Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="Release\moc_finddialog.cpp">
-      <Filter>Generated Files\Release</Filter>
+      <Filter>_to_sort\Generated Files\Release</Filter>
     </ClCompile>
     <ClCompile Include="Debug\moc_gotodialog.cpp">
-      <Filter>Generated Files\Debug</Filter>
+      <Filter>_to_sort\Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="Release\moc_gotodialog.cpp">
-      <Filter>Generated Files\Release</Filter>
+      <Filter>_to_sort\Generated Files\Release</Filter>
     </ClCompile>
     <ClCompile Include="Debug\moc_highlighter.cpp">
-      <Filter>Generated Files\Debug</Filter>
+      <Filter>_to_sort\Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="Release\moc_highlighter.cpp">
-      <Filter>Generated Files\Release</Filter>
+      <Filter>_to_sort\Generated Files\Release</Filter>
     </ClCompile>
     <ClCompile Include="Debug\moc_messagepanel.cpp">
-      <Filter>Generated Files\Debug</Filter>
+      <Filter>_to_sort\Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="Release\moc_messagepanel.cpp">
-      <Filter>Generated Files\Release</Filter>
+      <Filter>_to_sort\Generated Files\Release</Filter>
     </ClCompile>
     <ClCompile Include="Debug\moc_newdialog.cpp">
-      <Filter>Generated Files\Debug</Filter>
+      <Filter>_to_sort\Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="Release\moc_newdialog.cpp">
-      <Filter>Generated Files\Release</Filter>
+      <Filter>_to_sort\Generated Files\Release</Filter>
     </ClCompile>
     <ClCompile Include="Debug\moc_parameterdelegate.cpp">
-      <Filter>Generated Files\Debug</Filter>
+      <Filter>_to_sort\Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="Release\moc_parameterdelegate.cpp">
-      <Filter>Generated Files\Release</Filter>
+      <Filter>_to_sort\Generated Files\Release</Filter>
     </ClCompile>
     <ClCompile Include="Debug\moc_parametermodel.cpp">
-      <Filter>Generated Files\Debug</Filter>
+      <Filter>_to_sort\Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="Release\moc_parametermodel.cpp">
-      <Filter>Generated Files\Release</Filter>
+      <Filter>_to_sort\Generated Files\Release</Filter>
     </ClCompile>
     <ClCompile Include="Debug\moc_parameterpanel.cpp">
-      <Filter>Generated Files\Debug</Filter>
+      <Filter>_to_sort\Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="Release\moc_parameterpanel.cpp">
-      <Filter>Generated Files\Release</Filter>
+      <Filter>_to_sort\Generated Files\Release</Filter>
     </ClCompile>
     <ClCompile Include="Debug\moc_qglview.cpp">
-      <Filter>Generated Files\Debug</Filter>
+      <Filter>_to_sort\Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="Release\moc_qglview.cpp">
-      <Filter>Generated Files\Release</Filter>
+      <Filter>_to_sort\Generated Files\Release</Filter>
     </ClCompile>
     <ClCompile Include="Debug\moc_qshaderedit.cpp">
-      <Filter>Generated Files\Debug</Filter>
+      <Filter>_to_sort\Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="Release\moc_qshaderedit.cpp">
-      <Filter>Generated Files\Release</Filter>
+      <Filter>_to_sort\Generated Files\Release</Filter>
     </ClCompile>
     <ClCompile Include="Debug\moc_scenepanel.cpp">
-      <Filter>Generated Files\Debug</Filter>
+      <Filter>_to_sort\Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="Release\moc_scenepanel.cpp">
-      <Filter>Generated Files\Release</Filter>
+      <Filter>_to_sort\Generated Files\Release</Filter>
     </ClCompile>
     <ClCompile Include="Debug\moc_titlebar.cpp">
-      <Filter>Generated Files\Debug</Filter>
+      <Filter>_to_sort\Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="Release\moc_titlebar.cpp">
-      <Filter>Generated Files\Release</Filter>
+      <Filter>_to_sort\Generated Files\Release</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\qrc_qshaderedit.cpp">
-      <Filter>Generated Files</Filter>
+      <Filter>_to_sort\Generated Files</Filter>
     </ClCompile>
     <ClCompile Include="asmeffect.cpp">
-      <Filter>Source Files\Effects</Filter>
+      <Filter>_to_sort\Source Files\Effects</Filter>
     </ClCompile>
     <ClCompile Include="cgexplicit.cpp">
-      <Filter>Source Files\Effects</Filter>
+      <Filter>_to_sort\Source Files\Effects</Filter>
     </ClCompile>
     <ClCompile Include="cgfxeffect.cpp">
-      <Filter>Source Files\Effects</Filter>
+      <Filter>_to_sort\Source Files\Effects</Filter>
     </ClCompile>
     <ClCompile Include="effect.cpp">
-      <Filter>Source Files\Effects</Filter>
+      <Filter>_to_sort\Source Files\Effects</Filter>
     </ClCompile>
     <ClCompile Include="glsleffect.cpp">
-      <Filter>Source Files\Effects</Filter>
+      <Filter>_to_sort\Source Files\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="document.cpp">
+      <Filter>_to_sort\Source Files\Document</Filter>
+    </ClCompile>
+    <ClCompile Include="finddialog.cpp">
+      <Filter>_to_sort\Source Files\UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="gotodialog.cpp">
+      <Filter>_to_sort\Source Files\UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="newdialog.cpp">
+      <Filter>_to_sort\Source Files\UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="messagepanel.cpp">
+      <Filter>_to_sort\Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="titlebar.cpp">
+      <Filter>_to_sort\Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="glutils.cpp">
+      <Filter>_to_sort\Source Files\GL</Filter>
+    </ClCompile>
+    <ClCompile Include="md5scene.cpp">
+      <Filter>_to_sort\Source Files\GL</Filter>
+    </ClCompile>
+    <ClCompile Include="scene.cpp">
+      <Filter>_to_sort\Source Files\GL</Filter>
+    </ClCompile>
+    <ClCompile Include="teapot.cpp">
+      <Filter>_to_sort\Source Files\GL</Filter>
+    </ClCompile>
+    <ClCompile Include="outputparser.cpp">
+      <Filter>_to_sort\Source Files\Document</Filter>
+    </ClCompile>
+    <ClCompile Include="highlighter.cpp">
+      <Filter>_to_sort\Source Files\Document</Filter>
+    </ClCompile>
+    <ClCompile Include="texmanager.cpp">
+      <Filter>_to_sort\Source Files\GL</Filter>
+    </ClCompile>
+    <ClCompile Include="parameter.cpp">
+      <Filter>_to_sort\Source Files\Parameters</Filter>
+    </ClCompile>
+    <ClCompile Include="parametermodel.cpp">
+      <Filter>_to_sort\Source Files\Parameters</Filter>
+    </ClCompile>
+    <ClCompile Include="parameterpanel.cpp">
+      <Filter>_to_sort\Source Files\Parameters</Filter>
+    </ClCompile>
+    <ClCompile Include="imageplugin.cpp">
+      <Filter>_to_sort\Source Files\Images</Filter>
+    </ClCompile>
+    <ClCompile Include="editor.cpp">
+      <Filter>_to_sort\Source Files\Document</Filter>
+    </ClCompile>
+    <ClCompile Include="parameterdelegate.cpp">
+      <Filter>_to_sort\Source Files\Parameters</Filter>
+    </ClCompile>
+    <ClCompile Include="qglview.cpp">
+      <Filter>_to_sort\Source Files\GL</Filter>
+    </ClCompile>
+    <ClCompile Include="scenepanel.cpp">
+      <Filter>_to_sort\Source Files\GL</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_ThemeManager.cpp">
+      <Filter>_to_sort\Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_ThemeManager.cpp">
+      <Filter>_to_sort\Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="ThemingFactory.cpp">
+      <Filter>_to_sort\Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ThemeManager.cpp">
+      <Filter>Theming</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="qshaderedit.cpp">
+      <Filter>UI\MainWindow</Filter>
+    </ClCompile>
+    <ClCompile Include="services.cpp">
+      <Filter>Services</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cgexplicit.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <CustomBuild Include="document.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="editor.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="effect.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="finddialog.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <ClInclude Include="glutils.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <CustomBuild Include="gotodialog.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="highlighter.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <ClInclude Include="imageplugin.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="md5scene.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <CustomBuild Include="messagepanel.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="newdialog.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <ClInclude Include="outputparser.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="parameter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <CustomBuild Include="parameterdelegate.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="parametermodel.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="parameterpanel.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="qglview.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="qshaderedit.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <ClInclude Include="scene.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <CustomBuild Include="scenepanel.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <ClInclude Include="texmanager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <CustomBuild Include="titlebar.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
     <ClInclude Include="GeneratedFiles\ui_finddialog.h">
-      <Filter>Generated Files</Filter>
+      <Filter>_to_sort\Generated Files</Filter>
     </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_gotodialog.h">
-      <Filter>Generated Files</Filter>
+      <Filter>_to_sort\Generated Files</Filter>
     </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_newdialog.h">
-      <Filter>Generated Files</Filter>
+      <Filter>_to_sort\Generated Files</Filter>
     </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_parameterpropertiesdialog.h">
-      <Filter>Generated Files</Filter>
+      <Filter>_to_sort\Generated Files</Filter>
     </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_texturepropertiesdialog.h">
-      <Filter>Generated Files</Filter>
+      <Filter>_to_sort\Generated Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="effect.h">
+      <Filter>_to_sort\Header Files\Effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="finddialog.h">
+      <Filter>_to_sort\Header Files\UI\Dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="gotodialog.h">
+      <Filter>_to_sort\Header Files\UI\Dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="newdialog.h">
+      <Filter>_to_sort\Header Files\UI\Dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="titlebar.h">
+      <Filter>_to_sort\Header Files\UI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="messagepanel.h">
+      <Filter>_to_sort\Header Files\UI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="document.h">
+      <Filter>_to_sort\Header Files\Document</Filter>
+    </CustomBuild>
+    <ClInclude Include="outputparser.h">
+      <Filter>_to_sort\Header Files\Document</Filter>
+    </ClInclude>
+    <ClInclude Include="parameter.h">
+      <Filter>_to_sort\Header Files\Parameters</Filter>
+    </ClInclude>
+    <ClInclude Include="imageplugin.h">
+      <Filter>_to_sort\Header Files\Images</Filter>
     </ClInclude>
     <ClInclude Include="stb_image.h">
-      <Filter>Header Files</Filter>
+      <Filter>_to_sort\Header Files\Images</Filter>
+    </ClInclude>
+    <ClInclude Include="ThemingFactory.h">
+      <Filter>_to_sort\Header Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Theme.h">
+      <Filter>Theming</Filter>
+    </ClInclude>
+    <ClInclude Include="services.h">
+      <Filter>Services</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="finddialog.ui">
-      <Filter>Form Files</Filter>
+      <Filter>_to_sort\Form Files</Filter>
     </CustomBuild>
     <CustomBuild Include="gotodialog.ui">
-      <Filter>Form Files</Filter>
+      <Filter>_to_sort\Form Files</Filter>
     </CustomBuild>
     <CustomBuild Include="newdialog.ui">
-      <Filter>Form Files</Filter>
+      <Filter>_to_sort\Form Files</Filter>
     </CustomBuild>
     <CustomBuild Include="parameterpropertiesdialog.ui">
-      <Filter>Form Files</Filter>
+      <Filter>_to_sort\Form Files</Filter>
     </CustomBuild>
     <CustomBuild Include="texturepropertiesdialog.ui">
-      <Filter>Form Files</Filter>
+      <Filter>_to_sort\Form Files</Filter>
     </CustomBuild>
     <CustomBuild Include="qshaderedit.qrc">
-      <Filter>Resource Files</Filter>
+      <Filter>_to_sort\Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="highlighter.h">
+      <Filter>_to_sort\Header Files\Document</Filter>
+    </CustomBuild>
+    <CustomBuild Include="parametermodel.h">
+      <Filter>_to_sort\Header Files\Parameters</Filter>
+    </CustomBuild>
+    <CustomBuild Include="parameterpanel.h">
+      <Filter>_to_sort\Header Files\Parameters</Filter>
+    </CustomBuild>
+    <CustomBuild Include="parameterdelegate.h">
+      <Filter>_to_sort\Header Files\Parameters</Filter>
+    </CustomBuild>
+    <CustomBuild Include="qglview.h">
+      <Filter>_to_sort\Header Files\GL</Filter>
+    </CustomBuild>
+    <CustomBuild Include="editor.h">
+      <Filter>_to_sort\Header Files\Document</Filter>
+    </CustomBuild>
+    <CustomBuild Include="scenepanel.h">
+      <Filter>_to_sort\Header Files\GL</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ThemeManager.h">
+      <Filter>Theming</Filter>
+    </CustomBuild>
+    <CustomBuild Include="qshaderedit.h">
+      <Filter>UI\MainWindow</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Image Include="images\default.png">
-      <Filter>Resource Files</Filter>
+      <Filter>_to_sort\Resource Files</Filter>
     </Image>
     <Image Include="images\mac\filenew.png">
-      <Filter>Resource Files</Filter>
+      <Filter>_to_sort\Resource Files</Filter>
     </Image>
     <Image Include="images\mac\fileopen.png">
-      <Filter>Resource Files</Filter>
+      <Filter>_to_sort\Resource Files</Filter>
     </Image>
     <Image Include="images\mac\filesave.png">
-      <Filter>Resource Files</Filter>
+      <Filter>_to_sort\Resource Files</Filter>
     </Image>
     <Image Include="images\mac\editundo.png">
-      <Filter>Resource Files</Filter>
+      <Filter>_to_sort\Resource Files</Filter>
     </Image>
     <Image Include="images\mac\editredo.png">
-      <Filter>Resource Files</Filter>
+      <Filter>_to_sort\Resource Files</Filter>
     </Image>
     <Image Include="images\mac\editcut.png">
-      <Filter>Resource Files</Filter>
+      <Filter>_to_sort\Resource Files</Filter>
     </Image>
     <Image Include="images\mac\editcopy.png">
-      <Filter>Resource Files</Filter>
+      <Filter>_to_sort\Resource Files</Filter>
     </Image>
     <Image Include="images\mac\editpaste.png">
-      <Filter>Resource Files</Filter>
+      <Filter>_to_sort\Resource Files</Filter>
     </Image>
     <Image Include="images\mac\find.png">
-      <Filter>Resource Files</Filter>
+      <Filter>_to_sort\Resource Files</Filter>
     </Image>
     <Image Include="images\win\filenew.png">
-      <Filter>Resource Files</Filter>
+      <Filter>_to_sort\Resource Files</Filter>
     </Image>
     <Image Include="images\win\fileopen.png">
-      <Filter>Resource Files</Filter>
+      <Filter>_to_sort\Resource Files</Filter>
     </Image>
     <Image Include="images\win\filesave.png">
-      <Filter>Resource Files</Filter>
+      <Filter>_to_sort\Resource Files</Filter>
     </Image>
     <Image Include="images\win\editundo.png">
-      <Filter>Resource Files</Filter>
+      <Filter>_to_sort\Resource Files</Filter>
     </Image>
     <Image Include="images\win\editredo.png">
-      <Filter>Resource Files</Filter>
+      <Filter>_to_sort\Resource Files</Filter>
     </Image>
     <Image Include="images\win\editcut.png">
-      <Filter>Resource Files</Filter>
+      <Filter>_to_sort\Resource Files</Filter>
     </Image>
     <Image Include="images\win\editcopy.png">
-      <Filter>Resource Files</Filter>
+      <Filter>_to_sort\Resource Files</Filter>
     </Image>
     <Image Include="images\win\editpaste.png">
-      <Filter>Resource Files</Filter>
+      <Filter>_to_sort\Resource Files</Filter>
     </Image>
     <Image Include="images\win\find.png">
-      <Filter>Resource Files</Filter>
+      <Filter>_to_sort\Resource Files</Filter>
     </Image>
     <Image Include="images\toolbutton.png">
-      <Filter>Resource Files</Filter>
+      <Filter>_to_sort\Resource Files</Filter>
     </Image>
     <Image Include="images\colorpicker.png">
-      <Filter>Resource Files</Filter>
+      <Filter>_to_sort\Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cgexplicit.h">
+      <Filter>_to_sort\Header Files\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="scene.h">
+      <Filter>_to_sort\Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="texmanager.h">
+      <Filter>_to_sort\Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="md5scene.h">
+      <Filter>_to_sort\Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="glutils.h">
+      <Filter>_to_sort\Header Files\GL</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

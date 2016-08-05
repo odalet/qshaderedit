@@ -34,7 +34,8 @@ SceneView::SceneView(QWidget * parent, QGLWidget * shareWidget) : QGLWidget(pare
 	m_effect(NULL), 
 	m_scene(NULL), 
 	m_wireframe(false), 
-	m_ortho(false)
+	m_ortho(false),
+	renderingIsPaused(false)
 {
 	setAutoBufferSwap(false);
 }
@@ -143,12 +144,19 @@ void SceneView::resetGL()
 
 void SceneView::resizeGL(int w, int h)
 {
+	if (renderingIsPaused) return;
+
 	glViewport(0, 0, (GLsizei) w, (GLsizei) h);
 	updateMatrices();
 }
 
+void SceneView::pauseRendering() { renderingIsPaused = true; }
+void SceneView::resumeRendering() { renderingIsPaused = false; }
+
 void SceneView::paintGL()
 {
+	if (renderingIsPaused) return;
+
 	if( !isVisible() )
 	{
 		// @@ updateGL should not be called when the window is hidden!

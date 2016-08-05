@@ -1,21 +1,21 @@
 /*
-    QShaderEdit - Simple multiplatform shader editor
-    Copyright (C) 2007 Ignacio Castaño <castano@gmail.com>
-    Copyright (C) 2007 Lars Uebernickel <larsuebernickel@gmx.de>
+	QShaderEdit - Simple multiplatform shader editor
+	Copyright (C) 2007 Ignacio Castaño <castano@gmail.com>
+	Copyright (C) 2007 Lars Uebernickel <larsuebernickel@gmx.de>
 
-    This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation; either version 2 of the License, or
-    (at your option) any later version.
+	This program is free software; you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation; either version 2 of the License, or
+	(at your option) any later version.
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+	You should have received a copy of the GNU General Public License
+	along with this program; if not, write to the Free Software
+	Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
 #include "effect.h"
@@ -24,6 +24,7 @@
 #include "texmanager.h"
 #include "parameter.h"
 #include "glutils.h"
+#include "qglview.h"
 
 #include <QtCore/QFile>
 #include <QtCore/QByteArray>
@@ -32,7 +33,7 @@
 #include <QtCore/QDir>
 
 #include <QtGui/QImage>
-
+#include <QtWidgets/QApplication>
 #include <GL/glew.h>
 
 #include <QtOpenGL/QGLContext>
@@ -71,53 +72,53 @@ namespace {
 
 	static QString getTypeName(GLint type)
 	{
-		switch( type ) {
-			case GL_FLOAT:
-				return "float";
-			case GL_FLOAT_VEC2_ARB:
-				return "vec2";
-			case GL_FLOAT_VEC3_ARB:
-				return "vec3";
-			case GL_FLOAT_VEC4_ARB:
-				return "vec4";
-			case GL_INT:
-				return "int";
-			case GL_INT_VEC2_ARB:
-				return "ivec2";
-			case GL_INT_VEC3_ARB:
-				return "ivec3";
-			case GL_INT_VEC4_ARB:
-				return "ivec4";
-			case GL_BOOL_ARB:
-				return "bool";
-			case GL_BOOL_VEC2_ARB:
-				return "bvec2";
-			case GL_BOOL_VEC3_ARB:
-				return "bvec3";
-			case GL_BOOL_VEC4_ARB:
-				return "bvec4";
-			case GL_FLOAT_MAT2_ARB:
-				return "mat2";
-			case GL_FLOAT_MAT3_ARB:
-				return "mat3";
-			case GL_FLOAT_MAT4_ARB:
-				return "mat4";
-			case GL_SAMPLER_1D_ARB:
-				return "sampler1D";
-			case GL_SAMPLER_2D_ARB:
-				return "sampler2D";
-			case GL_SAMPLER_3D_ARB:
-				return "sampler3D";
-			case GL_SAMPLER_CUBE_ARB:
-				return "samplerCUBE";
-			case GL_SAMPLER_2D_RECT_ARB:
-				return "samplerRECT";
-			case GL_SAMPLER_1D_SHADOW_ARB:
-				return "sampler1DShadow";
-			case GL_SAMPLER_2D_SHADOW_ARB:
-				return "sampler2DShadow";
-			case GL_SAMPLER_2D_RECT_SHADOW_ARB:
-				return "samplerRECTShadow";
+		switch (type) {
+		case GL_FLOAT:
+			return "float";
+		case GL_FLOAT_VEC2_ARB:
+			return "vec2";
+		case GL_FLOAT_VEC3_ARB:
+			return "vec3";
+		case GL_FLOAT_VEC4_ARB:
+			return "vec4";
+		case GL_INT:
+			return "int";
+		case GL_INT_VEC2_ARB:
+			return "ivec2";
+		case GL_INT_VEC3_ARB:
+			return "ivec3";
+		case GL_INT_VEC4_ARB:
+			return "ivec4";
+		case GL_BOOL_ARB:
+			return "bool";
+		case GL_BOOL_VEC2_ARB:
+			return "bvec2";
+		case GL_BOOL_VEC3_ARB:
+			return "bvec3";
+		case GL_BOOL_VEC4_ARB:
+			return "bvec4";
+		case GL_FLOAT_MAT2_ARB:
+			return "mat2";
+		case GL_FLOAT_MAT3_ARB:
+			return "mat3";
+		case GL_FLOAT_MAT4_ARB:
+			return "mat4";
+		case GL_SAMPLER_1D_ARB:
+			return "sampler1D";
+		case GL_SAMPLER_2D_ARB:
+			return "sampler2D";
+		case GL_SAMPLER_3D_ARB:
+			return "sampler3D";
+		case GL_SAMPLER_CUBE_ARB:
+			return "samplerCUBE";
+		case GL_SAMPLER_2D_RECT_ARB:
+			return "samplerRECT";
+		case GL_SAMPLER_1D_SHADOW_ARB:
+			return "sampler1DShadow";
+		case GL_SAMPLER_2D_SHADOW_ARB:
+			return "sampler2DShadow";
+		case GL_SAMPLER_2D_RECT_SHADOW_ARB:
+			return "samplerRECTShadow";
 		}
 
 		return "";
@@ -125,117 +126,117 @@ namespace {
 
 	static GLint getType(QString str)
 	{
-		if( str == "float" ) return GL_FLOAT;
-		if( str == "vec2" ) return GL_FLOAT_VEC2_ARB;
-		if( str == "vec3" ) return GL_FLOAT_VEC3_ARB;
-		if( str == "vec4" ) return GL_FLOAT_VEC4_ARB;
+		if (str == "float") return GL_FLOAT;
+		if (str == "vec2") return GL_FLOAT_VEC2_ARB;
+		if (str == "vec3") return GL_FLOAT_VEC3_ARB;
+		if (str == "vec4") return GL_FLOAT_VEC4_ARB;
 
-		if( str == "int" ) return GL_INT;
-		if( str == "ivec2" ) return GL_INT_VEC2_ARB;
-		if( str == "ivec3" ) return GL_INT_VEC3_ARB;
-		if( str == "ivec4" ) return GL_INT_VEC4_ARB;
+		if (str == "int") return GL_INT;
+		if (str == "ivec2") return GL_INT_VEC2_ARB;
+		if (str == "ivec3") return GL_INT_VEC3_ARB;
+		if (str == "ivec4") return GL_INT_VEC4_ARB;
 
-		if( str == "bool" ) return GL_BOOL;
-		if( str == "bvec2" ) return GL_BOOL_VEC2_ARB;
-		if( str == "bvec3" ) return GL_BOOL_VEC3_ARB;
-		if( str == "bvec4" ) return GL_BOOL_VEC4_ARB;
+		if (str == "bool") return GL_BOOL;
+		if (str == "bvec2") return GL_BOOL_VEC2_ARB;
+		if (str == "bvec3") return GL_BOOL_VEC3_ARB;
+		if (str == "bvec4") return GL_BOOL_VEC4_ARB;
 
-		if( str == "mat2" ) return GL_FLOAT_MAT2_ARB;
-		if( str == "mat3" ) return GL_FLOAT_MAT3_ARB;
-		if( str == "mat4" ) return GL_FLOAT_MAT4_ARB;
+		if (str == "mat2") return GL_FLOAT_MAT2_ARB;
+		if (str == "mat3") return GL_FLOAT_MAT3_ARB;
+		if (str == "mat4") return GL_FLOAT_MAT4_ARB;
 
-		if( str == "sampler1D" ) return GL_SAMPLER_1D_ARB;
-		if( str == "sampler2D" ) return GL_SAMPLER_2D_ARB;
-		if( str == "sampler3D" ) return GL_SAMPLER_3D_ARB;
-		if( str == "samplerCUBE" ) return GL_SAMPLER_CUBE_ARB;
-		if( str == "samplerRECT" ) return GL_SAMPLER_2D_RECT_ARB;
-		if( str == "sampler1DShadow" ) return GL_SAMPLER_1D_SHADOW_ARB;
-		if( str == "sampler2DShadow" ) return GL_SAMPLER_2D_SHADOW_ARB;
-		if( str == "samplerRECTShadow" ) return GL_SAMPLER_2D_RECT_SHADOW_ARB;
+		if (str == "sampler1D") return GL_SAMPLER_1D_ARB;
+		if (str == "sampler2D") return GL_SAMPLER_2D_ARB;
+		if (str == "sampler3D") return GL_SAMPLER_3D_ARB;
+		if (str == "samplerCUBE") return GL_SAMPLER_CUBE_ARB;
+		if (str == "samplerRECT") return GL_SAMPLER_2D_RECT_ARB;
+		if (str == "sampler1DShadow") return GL_SAMPLER_1D_SHADOW_ARB;
+		if (str == "sampler2DShadow") return GL_SAMPLER_2D_SHADOW_ARB;
+		if (str == "samplerRECTShadow") return GL_SAMPLER_2D_RECT_SHADOW_ARB;
 
 		return GL_ZERO;
 	}
 
 	static GLenum getBaseType(GLenum type)
 	{
-		switch( type ) {
-			case GL_FLOAT:
-			case GL_FLOAT_VEC2_ARB:
-			case GL_FLOAT_VEC3_ARB:
-			case GL_FLOAT_VEC4_ARB:
-			case GL_FLOAT_MAT2_ARB:
-			case GL_FLOAT_MAT3_ARB:
-			case GL_FLOAT_MAT4_ARB:
-				return GL_FLOAT;
-			case GL_INT:
-			case GL_INT_VEC2_ARB:
-			case GL_INT_VEC3_ARB:
-			case GL_INT_VEC4_ARB:
-				return GL_INT;
-			case GL_BOOL_ARB:
-			case GL_BOOL_VEC2_ARB:
-			case GL_BOOL_VEC3_ARB:
-			case GL_BOOL_VEC4_ARB:
-				return GL_BOOL_ARB;
-			case GL_SAMPLER_1D_ARB:
-			case GL_SAMPLER_2D_ARB:
-			case GL_SAMPLER_3D_ARB:
-			case GL_SAMPLER_CUBE_ARB:
-			case GL_SAMPLER_2D_RECT_ARB:
-			case GL_SAMPLER_1D_SHADOW_ARB:
-			case GL_SAMPLER_2D_SHADOW_ARB:
-			case GL_SAMPLER_2D_RECT_SHADOW_ARB:
-				//return GL_SAMPLER;
-				break;
+		switch (type) {
+		case GL_FLOAT:
+		case GL_FLOAT_VEC2_ARB:
+		case GL_FLOAT_VEC3_ARB:
+		case GL_FLOAT_VEC4_ARB:
+		case GL_FLOAT_MAT2_ARB:
+		case GL_FLOAT_MAT3_ARB:
+		case GL_FLOAT_MAT4_ARB:
+			return GL_FLOAT;
+		case GL_INT:
+		case GL_INT_VEC2_ARB:
+		case GL_INT_VEC3_ARB:
+		case GL_INT_VEC4_ARB:
+			return GL_INT;
+		case GL_BOOL_ARB:
+		case GL_BOOL_VEC2_ARB:
+		case GL_BOOL_VEC3_ARB:
+		case GL_BOOL_VEC4_ARB:
+			return GL_BOOL_ARB;
+		case GL_SAMPLER_1D_ARB:
+		case GL_SAMPLER_2D_ARB:
+		case GL_SAMPLER_3D_ARB:
+		case GL_SAMPLER_CUBE_ARB:
+		case GL_SAMPLER_2D_RECT_ARB:
+		case GL_SAMPLER_1D_SHADOW_ARB:
+		case GL_SAMPLER_2D_SHADOW_ARB:
+		case GL_SAMPLER_2D_RECT_SHADOW_ARB:
+			//return GL_SAMPLER;
+			break;
 		}
 		return type;
 	}
-	
+
 	static int getRowNum(GLenum type)
 	{
-		switch( type ) {
-			case GL_FLOAT_VEC2_ARB:
-			case GL_INT_VEC2_ARB:
-			case GL_BOOL_VEC2_ARB:
-			case GL_FLOAT_MAT2_ARB:
-				return 2;
-			case GL_FLOAT_VEC3_ARB:
-			case GL_INT_VEC3_ARB:
-			case GL_BOOL_VEC3_ARB:
-			case GL_FLOAT_MAT3_ARB:
-				return 3;
-			case GL_FLOAT_VEC4_ARB:
-			case GL_INT_VEC4_ARB:
-			case GL_BOOL_VEC4_ARB:
-			case GL_FLOAT_MAT4_ARB:				
-				return 4;
+		switch (type) {
+		case GL_FLOAT_VEC2_ARB:
+		case GL_INT_VEC2_ARB:
+		case GL_BOOL_VEC2_ARB:
+		case GL_FLOAT_MAT2_ARB:
+			return 2;
+		case GL_FLOAT_VEC3_ARB:
+		case GL_INT_VEC3_ARB:
+		case GL_BOOL_VEC3_ARB:
+		case GL_FLOAT_MAT3_ARB:
+			return 3;
+		case GL_FLOAT_VEC4_ARB:
+		case GL_INT_VEC4_ARB:
+		case GL_BOOL_VEC4_ARB:
+		case GL_FLOAT_MAT4_ARB:
+			return 4;
 		}
 		return 0;
 	}
-	
+
 	static int getColumnNum(GLenum type)
 	{
-		switch( type ) {
-			case GL_FLOAT_VEC2_ARB:
-			case GL_INT_VEC2_ARB:
-			case GL_BOOL_VEC2_ARB:
-			case GL_FLOAT_VEC3_ARB:
-			case GL_INT_VEC3_ARB:
-			case GL_BOOL_VEC3_ARB:
-			case GL_FLOAT_VEC4_ARB:
-			case GL_INT_VEC4_ARB:
-			case GL_BOOL_VEC4_ARB:
-				return 1;
-			case GL_FLOAT_MAT2_ARB:
-				return 2; 
-			case GL_FLOAT_MAT3_ARB:
-				return 3;
-			case GL_FLOAT_MAT4_ARB:				
-				return 4;
+		switch (type) {
+		case GL_FLOAT_VEC2_ARB:
+		case GL_INT_VEC2_ARB:
+		case GL_BOOL_VEC2_ARB:
+		case GL_FLOAT_VEC3_ARB:
+		case GL_INT_VEC3_ARB:
+		case GL_BOOL_VEC3_ARB:
+		case GL_FLOAT_VEC4_ARB:
+		case GL_INT_VEC4_ARB:
+		case GL_BOOL_VEC4_ARB:
+			return 1;
+		case GL_FLOAT_MAT2_ARB:
+			return 2;
+		case GL_FLOAT_MAT3_ARB:
+			return 3;
+		case GL_FLOAT_MAT4_ARB:
+			return 4;
 		}
 		return 0;
 	}
-	
+
 	/// GLSL Parameter
 	class GLSLParameter : public Parameter
 	{
@@ -243,49 +244,49 @@ namespace {
 		GLenum m_type;
 		GLint m_location;
 		int m_texUnit; // only valid if isTexture() returns true
-		
+
 	public:
-		GLSLParameter(const QString& name, GLenum type, GLint location):
+		GLSLParameter(const QString& name, GLenum type, GLint location) :
 			m_type(type), m_location(location), m_texUnit(0)
 		{
 			setName(name);
-			
-			if( name.contains("color", Qt::CaseInsensitive) ) {
+
+			if (name.contains("color", Qt::CaseInsensitive)) {
 				if (m_type == GL_FLOAT_VEC3_ARB || m_type == GL_FLOAT_VEC4_ARB) {
 					setWidget(Widget_Color);
 				}
 			}
 		}
-		
+
 		virtual int rows() const { return getRowNum(m_type); }
 		virtual int columns() const { return getColumnNum(m_type); }
-		
+
 		GLenum glType() const { return m_type; }
 		GLint location() const { return m_location; }
-		
+
 		void setLocation(GLint location)
 		{
 			m_location = location;
 		}
-		
+
 		bool isTexture() const
 		{
 			return m_type == GL_SAMPLER_1D_ARB || m_type == GL_SAMPLER_2D_ARB || m_type == GL_SAMPLER_3D_ARB ||
 				m_type == GL_SAMPLER_CUBE_ARB || m_type == GL_SAMPLER_2D_RECT_ARB;
 		}
-		
+
 		int textureUnit() const
 		{
 			return m_texUnit;
 		}
-			
+
 		void setTextureUnit(int unit)
 		{
 			m_texUnit = unit;
 		}
-		
+
 		GLenum baseType() const {
-			return getBaseType(m_type);		
+			return getBaseType(m_type);
 		}
 	};
 
@@ -315,22 +316,25 @@ private:
 	class BuilderThread : public GLThread
 	{
 		GLSLEffect * m_effect;
-		
+
 	public:
-		BuilderThread(QGLWidget * widget, GLSLEffect * effect) : GLThread(widget), m_effect(effect)
+		BuilderThread(QGLWidget * widget, GLSLEffect * effect) : GLThread(widget), m_effect(effect) { }
+
+		void run() override
 		{
-		}
-		void run() 
-		{
-			this->makeCurrent();
+			makeCurrent();
 			bool succeed = m_effect->threadedBuild();
-			this->doneCurrent();
 			emit m_effect->built(succeed);
+
+			doneCurrent();
+			//m_glWidget->context()->moveToThread(qApp->thread());
+
+			((SceneView*)m_glWidget)->resumeRendering();
 		}
 	};
 	friend class BuilderThread;
 	BuilderThread m_thread;
-	
+
 public:
 
 	// Ctor.
@@ -344,22 +348,22 @@ public:
 		m_outputParser(0),
 		m_thread(widget, this)
 	{
-		this->makeCurrent();
-		
+		makeCurrent();
+
 		const char* vendor = (const char*)glGetString(GL_VENDOR);
 		if (strcmp(vendor, "ATI Technologies Inc.") == 0)
 			m_outputParser = new AtiGlslOutputParser;
 		else if (strcmp(vendor, "NVIDIA Corporation") == 0)
 			m_outputParser = new NvidiaOutputParser;
-		
+
 		m_time.start();
 	}
 
 	// Dtor.
 	virtual ~GLSLEffect()
 	{
-		this->makeCurrent();
-		
+		makeCurrent();
+
 		deleteProgram();
 		ReportGLErrors();
 		delete m_outputParser;
@@ -376,17 +380,17 @@ public:
 		m_fragmentShaderText.clear();
 
 		this->makeCurrent();
-		
+
 		QDir dir = QFileInfo(*file).dir();
-		
+
 		QByteArray line;
 		while (!file->atEnd()) {
 
-			if( line.startsWith(s_vertexShaderTag) ) {
+			if (line.startsWith(s_vertexShaderTag)) {
 				// Read vertex shader.
 				while (!file->atEnd()) {
 					line = file->readLine();
-					if( line.startsWith('[') ) {
+					if (line.startsWith('[')) {
 						break;
 					}
 					m_vertexShaderText.push_back(line);
@@ -395,11 +399,11 @@ public:
 				continue;
 			}
 
-			if( line.startsWith(s_fragmentShaderTag) ) {
+			if (line.startsWith(s_fragmentShaderTag)) {
 				// Read fragment shader.
 				while (!file->atEnd()) {
 					line = file->readLine();
-					if( line.startsWith('[') ) {
+					if (line.startsWith('[')) {
 						break;
 					}
 					m_fragmentShaderText.push_back(line);
@@ -408,11 +412,11 @@ public:
 				continue;
 			}
 
-			if( line.startsWith(s_parametersTag) ) {
+			if (line.startsWith(s_parametersTag)) {
 				// Parse parameters.
 				while (!file->atEnd()) {
 					line = file->readLine();
-					if( line.startsWith('[') ) {
+					if (line.startsWith('[')) {
 						break;
 					}
 					// Parse parameter->
@@ -435,20 +439,20 @@ public:
 		// [VertexShader]
 		file->write(s_vertexShaderTag, strlen(s_vertexShaderTag));
 		file->write(m_vertexShaderText);
-		if(!m_vertexShaderText.endsWith('\n')) {
+		if (!m_vertexShaderText.endsWith('\n')) {
 			file->write("\n");
 		}
 
 		// [FragmentShader]
 		file->write(s_fragmentShaderTag, strlen(s_fragmentShaderTag));
 		file->write(m_fragmentShaderText);
-		if(!m_fragmentShaderText.endsWith('\n')) {
+		if (!m_fragmentShaderText.endsWith('\n')) {
 			file->write("\n");
 		}
 
 		QDir dir = QFileInfo(*file).dir();
-		
-		if( this->parameterCount() > 0 ) {
+
+		if (this->parameterCount() > 0) {
 			// [Parameters]
 			file->write(s_parametersTag, strlen(s_parametersTag));
 
@@ -458,8 +462,7 @@ public:
 			}
 		}
 	}
-
-
+	
 	virtual int getInputNum()
 	{
 		return 2;
@@ -469,7 +472,7 @@ public:
 	{
 		Q_ASSERT(i == 0 || i == 1);
 
-		if( i == 0 ) {
+		if (i == 0) {
 			return tr("Vertex Shader");
 		}
 		else {
@@ -481,7 +484,7 @@ public:
 	{
 		Q_ASSERT(i == 0 || i == 1);
 
-		if( i == 0 ) {
+		if (i == 0) {
 			return m_vertexShaderText;
 		}
 		else {
@@ -493,7 +496,7 @@ public:
 	{
 		Q_ASSERT(i == 0 || i == 1);
 
-		if( i == 0 ) {
+		if (i == 0) {
 			m_vertexShaderText = txt;
 		}
 		else {
@@ -507,14 +510,13 @@ public:
 		GLhandleARB fragmentShader;
 		GLhandleARB program;
 		
-		
 		vertexShader = glCreateShaderObjectARB(GL_VERTEX_SHADER_ARB);
-		
+
 		emit infoMessage(tr("Compiling vertex shader..."));
 		const char * vertexStrings[] = { m_vertexShaderText.data() };
 		glShaderSourceARB(vertexShader, 1, vertexStrings, NULL);
 		glCompileShaderARB(vertexShader);
-		
+
 		// Get error log.
 		QByteArray infoLog;
 		GLint charsWritten, infoLogLength;
@@ -522,58 +524,58 @@ public:
 		infoLog.resize(infoLogLength);
 		glGetInfoLogARB(vertexShader, infoLogLength, &charsWritten, infoLog.data());
 		emit buildMessage(infoLog, 0, m_outputParser);
-		
+
 		fragmentShader = glCreateShaderObjectARB(GL_FRAGMENT_SHADER_ARB);
-		
+
 		emit infoMessage(tr("Compiling fragment shader..."));
 		const char * fragmentStrings[] = { m_fragmentShaderText.data() };
 		glShaderSourceARB(fragmentShader, 1, fragmentStrings, NULL);
 		glCompileShaderARB(fragmentShader);
-		
+
 		// Get error log.
 		infoLog.clear();
 		glGetObjectParameterivARB(fragmentShader, GL_OBJECT_INFO_LOG_LENGTH_ARB, &infoLogLength);
 		infoLog.resize(infoLogLength);
 		glGetInfoLogARB(fragmentShader, infoLogLength, &charsWritten, infoLog.data());
 		emit buildMessage(infoLog, 1, m_outputParser);
-		
+
 		// Check compilation.
 		GLint vertexCompileSucceed = GL_FALSE;
 		glGetObjectParameterivARB(vertexShader, GL_OBJECT_COMPILE_STATUS_ARB, &vertexCompileSucceed);
-		if( vertexCompileSucceed == GL_FALSE )
+		if (vertexCompileSucceed == GL_FALSE)
 		{
 			glDeleteObjectARB(vertexShader);
 			return false;
 		}
-		
+
 		GLint fragmentCompileSucceed = GL_FALSE;
 		glGetObjectParameterivARB(fragmentShader, GL_OBJECT_COMPILE_STATUS_ARB, &fragmentCompileSucceed);
-		if( fragmentCompileSucceed == GL_FALSE )
+		if (fragmentCompileSucceed == GL_FALSE)
 		{
 			glDeleteObjectARB(vertexShader);
 			glDeleteObjectARB(fragmentShader);
 			return false;
 		}
-		
+
 		program = glCreateProgramObjectARB();
-		
+
 		// Link the program.
 		emit infoMessage(tr("Linking..."));
 		glAttachObjectARB(program, vertexShader);
 		glAttachObjectARB(program, fragmentShader);
 		glLinkProgramARB(program);
-		
+
 		// Get error log.
 		infoLog.clear();
 		glGetObjectParameterivARB(program, GL_OBJECT_INFO_LOG_LENGTH_ARB, &infoLogLength);
 		infoLog.resize(infoLogLength);
 		glGetInfoLogARB(program, infoLogLength, &charsWritten, infoLog.data());
 		emit buildMessage(infoLog, -1, m_outputParser);
-		
+
 		// Test linker result.
 		GLint linkSucceed = GL_FALSE;
 		glGetObjectParameterivARB(program, GL_OBJECT_LINK_STATUS_ARB, &linkSucceed);
-		if( linkSucceed == GL_FALSE )
+		if (linkSucceed == GL_FALSE)
 		{
 			glDetachObjectARB(program, vertexShader);
 			glDetachObjectARB(program, fragmentShader);
@@ -582,40 +584,52 @@ public:
 			glDeleteObjectARB(program);
 			return false;
 		}
-		
+
 		// Delete previous effect.
 		deleteProgram();
-		
-		Q_ASSERT( m_vertexShader == 0 && vertexShader != 0 );
-		Q_ASSERT( m_fragmentShader == 0 && fragmentShader != 0 );
-		Q_ASSERT( m_program == 0 && program != 0 );
-		
+
+		Q_ASSERT(m_vertexShader == 0 && vertexShader != 0);
+		Q_ASSERT(m_fragmentShader == 0 && fragmentShader != 0);
+		Q_ASSERT(m_program == 0 && program != 0);
+
 		m_vertexShader = vertexShader;
 		m_fragmentShader = fragmentShader;
 		m_program = program;
-		
+
 		initParameters();
-		
+
 		return true;
 	}
-	
+
 	virtual void build(bool threaded)
 	{
 #if defined(Q_OS_LINUX)
 		threaded = false;
 #endif
 
-		if (threaded) {
+#if WIN32
+		threaded = false; // Threaded mode does not work any more either (due to Qt 5.7 ???)
+#endif
+
+		if (threaded)
+		{
+			// See http://stackoverflow.com/questions/19202338/threaded-opengl-with-shared-qglwidgets-issue-with-qt-5-1
+			// See also http://stackoverflow.com/questions/18345356/qglwidget-in-another-thread-what-is-the-documentation-referring-to
+			// And http://www.krazer.com/?p=109
+			// https://github.com/caseymcc/TestOpenCL/tree/master/TestOpenCL/kernels
+			doneCurrent();
+			((SceneView*)m_widget)->pauseRendering();
 			m_thread.start();
 		}
-		else {
-			this->makeCurrent();
+		else
+		{
+			makeCurrent();
 			bool succeed = threadedBuild();
 			emit built(succeed);
 		}
 	}
-	
-	virtual bool isBuilding() const 
+
+	virtual bool isBuilding() const
 	{
 		return m_thread.isRunning();
 	}
@@ -623,7 +637,7 @@ public:
 	// Parameter info.
 	virtual int parameterCount() const
 	{
-		return m_parameterArray.count();		
+		return m_parameterArray.count();
 	}
 
 	virtual const Parameter * parameterAt(int idx) const
@@ -686,11 +700,11 @@ public:
 		setParameters();
 	}
 
-	virtual void beginPass(int )
+	virtual void beginPass(int)
 	{
 		// nothing to do.
 	}
-	
+
 	virtual void beginMaterialGroup()
 	{
 		// needs to be called every time the material changes on ATI hardware
@@ -710,21 +724,21 @@ private:
 
 	void deleteProgram()
 	{
-		if( m_program != 0 ) {
-			if( m_vertexShader != 0 ) {
+		if (m_program != 0) {
+			if (m_vertexShader != 0) {
 				glDetachObjectARB(m_program, m_vertexShader);
 			}
-			if( m_fragmentShader != 0 ) {
+			if (m_fragmentShader != 0) {
 				glDetachObjectARB(m_program, m_fragmentShader);
 			}
 			glDeleteObjectARB(m_program);
 			m_program = 0;
 		}
-		if( m_vertexShader != 0 ) {
+		if (m_vertexShader != 0) {
 			glDeleteObjectARB(m_vertexShader);
 			m_vertexShader = 0;
 		}
-		if( m_fragmentShader != 0 ) {
+		if (m_fragmentShader != 0) {
 			glDeleteObjectARB(m_fragmentShader);
 			m_fragmentShader = 0;
 		}
@@ -733,8 +747,8 @@ private:
 	void initParameters()
 	{
 		m_timeUniform = -1;
-		
-		if( m_program == 0 ) {
+
+		if (m_program == 0) {
 			return;
 		}
 
@@ -743,7 +757,7 @@ private:
 
 		QVector<GLSLParameter*> newParameterArray;
 
-		for(int i = 0; i < count; i++) {
+		for (int i = 0; i < count; i++) {
 			char str[1024];
 			GLsizei length;
 			GLint size;
@@ -753,28 +767,28 @@ private:
 			QString name(str);
 
 			// skip gl uniforms.
-			if( name.startsWith("gl_") ) {
+			if (name.startsWith("gl_")) {
 				continue;
 			}
 
 			// Get standard uniforms.
-			if( name.toLower() == "time" ) {
+			if (name.toLower() == "time") {
 				m_timeUniform = glGetUniformLocationARB(m_program, str);
 				continue;
 			}
 
 			int location = glGetUniformLocationARB(m_program, str);
-			
+
 			// Add parameter
-			if( size == 1 ) {
+			if (size == 1) {
 				GLSLParameter * param = new GLSLParameter(name, type, location);
 				param->setValue(getParameterValue(param));
 				newParameterArray.push_back(param);
 			}
 			else {
 				// parameter array.
-				for(int i = 0; i < size; i++) {
-					GLSLParameter * param = new GLSLParameter(name + "[" + QString::number(i) + "]", type, location+i);
+				for (int i = 0; i < size; i++) {
+					GLSLParameter * param = new GLSLParameter(name + "[" + QString::number(i) + "]", type, location + i);
 					param->setValue(getParameterValue(param));
 					newParameterArray.push_back(param);
 				}
@@ -792,12 +806,12 @@ private:
 		int parameterNum = m_parameterArray.count();
 		int unit = 0;
 
-		for(int i = 0; i < parameterNum; i++) {
+		for (int i = 0; i < parameterNum; i++) {
 			GLSLParameter * parameter = m_parameterArray[i];
 
 			if (parameter->isTexture())
 			{
-				if( unit < texUnitNum ) {
+				if (unit < texUnitNum) {
 					parameter->setTextureUnit(unit++);
 				}
 				else {
@@ -815,152 +829,152 @@ private:
 		}
 
 		// Set standard parameters.
-		if( m_timeUniform != -1 ) {
+		if (m_timeUniform != -1) {
 			glUniform1fARB(m_timeUniform, 0.001f * m_time.elapsed());
 		}
 	}
 
 	void setParameter(const GLSLParameter * param)
 	{
-		switch( param->glType() ) {
-			case GL_FLOAT:
-				glUniform1fARB(param->location(), float(param->value().toDouble()));
-				break;
-			case GL_FLOAT_VEC2_ARB:
-			{
-				Q_ASSERT(param->value().canConvert(QVariant::List));
-				QVariantList list = param->value().toList();
-				Q_ASSERT(list.count() == 2);
-				glUniform2fARB(param->location(), list.at(0).toDouble(), list.at(1).toDouble());
-				break;
+		switch (param->glType()) {
+		case GL_FLOAT:
+			glUniform1fARB(param->location(), float(param->value().toDouble()));
+			break;
+		case GL_FLOAT_VEC2_ARB:
+		{
+			Q_ASSERT(param->value().canConvert(QVariant::List));
+			QVariantList list = param->value().toList();
+			Q_ASSERT(list.count() == 2);
+			glUniform2fARB(param->location(), list.at(0).toDouble(), list.at(1).toDouble());
+			break;
+		}
+		case GL_FLOAT_VEC3_ARB:
+		{
+			Q_ASSERT(param->value().canConvert(QVariant::List));
+			QVariantList list = param->value().toList();
+			Q_ASSERT(list.count() == 3);
+			glUniform3fARB(param->location(), list.at(0).toDouble(), list.at(1).toDouble(), list.at(2).toDouble());
+			break;
+		}
+		case GL_FLOAT_VEC4_ARB:
+		{
+			Q_ASSERT(param->value().canConvert(QVariant::List));
+			QVariantList list = param->value().toList();
+			Q_ASSERT(list.count() == 4);
+			glUniform4fARB(param->location(), list.at(0).toDouble(), list.at(1).toDouble(), list.at(2).toDouble(), list.at(3).toDouble());
+			break;
+		}
+		case GL_INT:
+			glUniform1iARB(param->location(), param->value().toInt());
+			break;
+		case GL_INT_VEC2_ARB:
+		{
+			Q_ASSERT(param->value().canConvert(QVariant::List));
+			QVariantList list = param->value().toList();
+			Q_ASSERT(list.count() == 2);
+			glUniform2iARB(param->location(), list.at(0).toInt(), list.at(1).toInt());
+			break;
+		}
+		case GL_INT_VEC3_ARB:
+		{
+			Q_ASSERT(param->value().canConvert(QVariant::List));
+			QVariantList list = param->value().toList();
+			Q_ASSERT(list.count() == 3);
+			glUniform3iARB(param->location(), list.at(0).toInt(), list.at(1).toInt(), list.at(2).toInt());
+			break;
+		}
+		case GL_INT_VEC4_ARB:
+		{
+			Q_ASSERT(param->value().canConvert(QVariant::List));
+			QVariantList list = param->value().toList();
+			Q_ASSERT(list.count() == 4);
+			glUniform4iARB(param->location(), list.at(0).toInt(), list.at(1).toInt(), list.at(2).toInt(), list.at(3).toInt());
+			break;
+		}
+		case GL_BOOL_ARB:
+			glUniform1iARB(param->location(), param->value().toBool());
+			break;
+		case GL_BOOL_VEC2_ARB:
+		{
+			Q_ASSERT(param->value().canConvert(QVariant::List));
+			QVariantList list = param->value().toList();
+			Q_ASSERT(list.count() == 2);
+			glUniform2iARB(param->location(), list.at(0).toBool(), list.at(1).toBool());
+			break;
+		}
+		case GL_BOOL_VEC3_ARB:
+		{
+			Q_ASSERT(param->value().canConvert(QVariant::List));
+			QVariantList list = param->value().toList();
+			Q_ASSERT(list.count() == 3);
+			glUniform3iARB(param->location(), list.at(0).toBool(), list.at(1).toBool(), list.at(2).toBool());
+			break;
+		}
+		case GL_BOOL_VEC4_ARB:
+		{
+			Q_ASSERT(param->value().canConvert(QVariant::List));
+			QVariantList list = param->value().toList();
+			Q_ASSERT(list.count() == 4);
+			glUniform4iARB(param->location(), list.at(0).toBool(), list.at(1).toBool(), list.at(2).toBool(), list.at(3).toBool());
+			break;
+		}
+		case GL_FLOAT_MAT2_ARB:
+		{
+			Q_ASSERT(param->value().canConvert(QVariant::List));
+			QVariantList list = param->value().toList();
+			Q_ASSERT(list.count() == 4);
+
+			float values[4];
+			for (int i = 0; i < 2 * 2; i++) {
+				values[i] = (float)list.at(0).toDouble();
 			}
-			case GL_FLOAT_VEC3_ARB:
-			{
-				Q_ASSERT(param->value().canConvert(QVariant::List));
-				QVariantList list = param->value().toList();
-				Q_ASSERT(list.count() == 3);	
-				glUniform3fARB(param->location(), list.at(0).toDouble(), list.at(1).toDouble(), list.at(2).toDouble());
-				break;
+
+			glUniformMatrix2fv(param->location(), 1, false, values);
+			break;
+		}
+		case GL_FLOAT_MAT3_ARB:
+		{
+			Q_ASSERT(param->value().canConvert(QVariant::List));
+			QVariantList list = param->value().toList();
+			Q_ASSERT(list.count() == 9);
+
+			float values[9];
+			for (int i = 0; i < 3 * 3; i++) {
+				values[i] = (float)list.at(0).toDouble();
 			}
-			case GL_FLOAT_VEC4_ARB:
-			{
-				Q_ASSERT(param->value().canConvert(QVariant::List));
-				QVariantList list = param->value().toList();
-				Q_ASSERT(list.count() == 4);
-				glUniform4fARB(param->location(), list.at(0).toDouble(), list.at(1).toDouble(), list.at(2).toDouble(), list.at(3).toDouble());
-				break;
+
+			glUniformMatrix3fv(param->location(), 1, false, values);
+			break;
+		}
+		case GL_FLOAT_MAT4_ARB:
+		{
+			Q_ASSERT(param->value().canConvert(QVariant::List));
+			QVariantList list = param->value().toList();
+			Q_ASSERT(list.count() == 16);
+
+			float values[16];
+			for (int i = 0; i < 4 * 4; i++) {
+				values[i] = (float)list.at(0).toDouble();
 			}
-			case GL_INT:
-				glUniform1iARB(param->location(), param->value().toInt());
-				break;
-			case GL_INT_VEC2_ARB:
-			{
-				Q_ASSERT(param->value().canConvert(QVariant::List));
-				QVariantList list = param->value().toList();
-				Q_ASSERT(list.count() == 2);
-				glUniform2iARB(param->location(), list.at(0).toInt(), list.at(1).toInt());
-				break;
-			}
-			case GL_INT_VEC3_ARB:
-			{
-				Q_ASSERT(param->value().canConvert(QVariant::List));
-				QVariantList list = param->value().toList();
-				Q_ASSERT(list.count() == 3);
-				glUniform3iARB(param->location(), list.at(0).toInt(), list.at(1).toInt(), list.at(2).toInt());
-				break;
-			}
-			case GL_INT_VEC4_ARB:
-			{
-				Q_ASSERT(param->value().canConvert(QVariant::List));
-				QVariantList list = param->value().toList();
-				Q_ASSERT(list.count() == 4);
-				glUniform4iARB(param->location(), list.at(0).toInt(), list.at(1).toInt(), list.at(2).toInt(), list.at(3).toInt());
-				break;
-			}
-			case GL_BOOL_ARB:
-				glUniform1iARB(param->location(), param->value().toBool());
-				break;
-			case GL_BOOL_VEC2_ARB:
-			{
-				Q_ASSERT(param->value().canConvert(QVariant::List));
-				QVariantList list = param->value().toList();
-				Q_ASSERT(list.count() == 2);
-				glUniform2iARB(param->location(), list.at(0).toBool(), list.at(1).toBool());
-				break;
-			}
-			case GL_BOOL_VEC3_ARB:
-			{
-				Q_ASSERT(param->value().canConvert(QVariant::List));
-				QVariantList list = param->value().toList();
-				Q_ASSERT(list.count() == 3);
-				glUniform3iARB(param->location(), list.at(0).toBool(), list.at(1).toBool(), list.at(2).toBool());
-				break;
-			}
-			case GL_BOOL_VEC4_ARB:
-			{
-				Q_ASSERT(param->value().canConvert(QVariant::List));
-				QVariantList list = param->value().toList();
-				Q_ASSERT(list.count() == 4);
-				glUniform4iARB(param->location(), list.at(0).toBool(), list.at(1).toBool(), list.at(2).toBool(), list.at(3).toBool());
-				break;
-			}
-			case GL_FLOAT_MAT2_ARB:
-			{
-				Q_ASSERT(param->value().canConvert(QVariant::List));
-				QVariantList list = param->value().toList();
-				Q_ASSERT(list.count() == 4);
-				
-				float values[4];
-				for(int i = 0; i < 2*2; i++) {
-					values[i] = (float)list.at(0).toDouble();
-				}
-				
-				glUniformMatrix2fv(param->location(), 1, false, values);
-				break;
-			}
-			case GL_FLOAT_MAT3_ARB:
-			{
-				Q_ASSERT(param->value().canConvert(QVariant::List));
-				QVariantList list = param->value().toList();
-				Q_ASSERT(list.count() == 9);
-				
-				float values[9];
-				for(int i = 0; i < 3*3; i++) {
-					values[i] = (float)list.at(0).toDouble();
-				}
-				
-				glUniformMatrix3fv(param->location(), 1, false, values);
-				break;
-			}
-			case GL_FLOAT_MAT4_ARB:
-			{
-				Q_ASSERT(param->value().canConvert(QVariant::List));
-				QVariantList list = param->value().toList();
-				Q_ASSERT(list.count() == 16);
-				
-				float values[16];
-				for(int i = 0; i < 4*4; i++) {
-					values[i] = (float)list.at(0).toDouble();
-				}
-				
-				glUniformMatrix4fv(param->location(), 1, false, values);
-				break;
-			}
-			case GL_SAMPLER_1D_ARB:
-			case GL_SAMPLER_2D_ARB:
-			case GL_SAMPLER_3D_ARB:
-			case GL_SAMPLER_CUBE_ARB:
-			case GL_SAMPLER_2D_RECT_ARB: {
-				GLTexture tex = param->value().value<GLTexture>();
-				glUniform1iARB(param->location(), param->textureUnit());
-				glActiveTextureARB(GL_TEXTURE0_ARB + param->textureUnit());
-				glBindTexture(tex.target(), tex.object());
-				break;
-			}
-			case GL_SAMPLER_1D_SHADOW_ARB:
-			case GL_SAMPLER_2D_SHADOW_ARB:
-			case GL_SAMPLER_2D_RECT_SHADOW_ARB:
-				break;
+
+			glUniformMatrix4fv(param->location(), 1, false, values);
+			break;
+		}
+		case GL_SAMPLER_1D_ARB:
+		case GL_SAMPLER_2D_ARB:
+		case GL_SAMPLER_3D_ARB:
+		case GL_SAMPLER_CUBE_ARB:
+		case GL_SAMPLER_2D_RECT_ARB: {
+			GLTexture tex = param->value().value<GLTexture>();
+			glUniform1iARB(param->location(), param->textureUnit());
+			glActiveTextureARB(GL_TEXTURE0_ARB + param->textureUnit());
+			glBindTexture(tex.target(), tex.object());
+			break;
+		}
+		case GL_SAMPLER_1D_SHADOW_ARB:
+		case GL_SAMPLER_2D_SHADOW_ARB:
+		case GL_SAMPLER_2D_RECT_SHADOW_ARB:
+			break;
 		}
 	}
 
@@ -968,143 +982,143 @@ private:
 	{
 		// Try to get old value.
 		foreach(const GLSLParameter * p, m_parameterArray) {
-			if( p->name() == param->name() ) {
+			if (p->name() == param->name()) {
 				return p->value();
 			}
-		}					
-		
+		}
+
 		// Get default value of the corresponding type.
-		switch( param->glType() ) {
-			case GL_FLOAT:
-			{
-				GLfloat fvalue[1];
-				glGetUniformfvARB(m_program, param->location(), fvalue);
-				return fvalue[0];
+		switch (param->glType()) {
+		case GL_FLOAT:
+		{
+			GLfloat fvalue[1];
+			glGetUniformfvARB(m_program, param->location(), fvalue);
+			return fvalue[0];
+		}
+		case GL_FLOAT_VEC2_ARB:
+		{
+			GLfloat fvalue[2];
+			QList<QVariant> list;
+			glGetUniformfvARB(m_program, param->location(), fvalue);
+			list << fvalue[0] << fvalue[1];
+			return list;
+		}
+		case GL_FLOAT_VEC3_ARB:
+		{
+			GLfloat fvalue[3];
+			QList<QVariant> list;
+			glGetUniformfvARB(m_program, param->location(), fvalue);
+			list << fvalue[0] << fvalue[1] << fvalue[2];
+			return list;
+		}
+		case GL_FLOAT_VEC4_ARB:
+		{
+			GLfloat fvalue[4];
+			QList<QVariant> list;
+			glGetUniformfvARB(m_program, param->location(), fvalue);
+			list << fvalue[0] << fvalue[1] << fvalue[2] << fvalue[3];
+			return list;
+		}
+		case GL_INT:
+		{
+			GLint ivalue[1];
+			glGetUniformivARB(m_program, param->location(), ivalue);
+			return (int)ivalue[0];
+		}
+		case GL_INT_VEC2_ARB:
+		{
+			GLint ivalue[2];
+			QList<QVariant> list;
+			glGetUniformivARB(m_program, param->location(), ivalue);
+			list << (int)ivalue[0] << (int)ivalue[1];
+			return list;
+		}
+		case GL_INT_VEC3_ARB:
+		{
+			GLint ivalue[3];
+			QList<QVariant> list;
+			glGetUniformivARB(m_program, param->location(), ivalue);
+			list << (int)ivalue[0] << (int)ivalue[1] << (int)ivalue[2];
+			return list;
+		}
+		case GL_INT_VEC4_ARB:
+		{
+			GLint ivalue[4];
+			QList<QVariant> list;
+			glGetUniformivARB(m_program, param->location(), ivalue);
+			list << (int)ivalue[0] << (int)ivalue[1] << (int)ivalue[2] << (int)ivalue[3];
+			return list;
+		}
+		case GL_BOOL_ARB:
+		{
+			GLint ivalue[1];
+			glGetUniformivARB(m_program, param->location(), ivalue);
+			return ivalue[0] != 0;
+		}
+		case GL_BOOL_VEC2_ARB:
+		{
+			GLint ivalue[2];
+			QList<QVariant> list;
+			glGetUniformivARB(m_program, param->location(), ivalue);
+			list << (ivalue[0] != 0) << (ivalue[1] != 0);
+			return list;
+		}
+		case GL_BOOL_VEC3_ARB:
+		{
+			GLint ivalue[3];
+			QList<QVariant> list;
+			glGetUniformivARB(m_program, param->location(), ivalue);
+			list << (ivalue[0] != 0) << (ivalue[1] != 0) << (ivalue[2] != 0);
+			return list;
+		}
+		case GL_BOOL_VEC4_ARB:
+		{
+			GLint ivalue[4];
+			QList<QVariant> list;
+			glGetUniformivARB(m_program, param->location(), ivalue);
+			list << (ivalue[0] != 0) << (ivalue[1] != 0) << (ivalue[2] != 0) << (ivalue[3] != 0);
+			return list;
+		}
+		case GL_FLOAT_MAT2_ARB:
+		{
+			GLfloat fvalue[2 * 2];
+			QList<QVariant> list;
+			glGetUniformfvARB(m_program, param->location(), fvalue);
+			for (int i = 0; i < 2 * 2; i++) {
+				list.append(fvalue[i]);
 			}
-			case GL_FLOAT_VEC2_ARB:
-			{
-				GLfloat fvalue[2];
-				QList<QVariant> list;
-				glGetUniformfvARB(m_program, param->location(), fvalue);
-				list << fvalue[0] << fvalue[1];
-				return list;
+			return list;
+		}
+		case GL_FLOAT_MAT3_ARB:
+		{
+			GLfloat fvalue[3 * 3];
+			QList<QVariant> list;
+			glGetUniformfvARB(m_program, param->location(), fvalue);
+			for (int i = 0; i < 3 * 3; i++) {
+				list.append(fvalue[i]);
 			}
-			case GL_FLOAT_VEC3_ARB:
-			{
-				GLfloat fvalue[3];
-				QList<QVariant> list;
-				glGetUniformfvARB(m_program, param->location(), fvalue);
-				list << fvalue[0] << fvalue[1] << fvalue[2];
-				return list;
+			return list;
+		}
+		case GL_FLOAT_MAT4_ARB:
+		{
+			GLfloat fvalue[4 * 4];
+			QList<QVariant> list;
+			glGetUniformfvARB(m_program, param->location(), fvalue);
+			for (int i = 0; i < 4 * 4; i++) {
+				list.append(fvalue[i]);
 			}
-			case GL_FLOAT_VEC4_ARB:
-			{
-				GLfloat fvalue[4];
-				QList<QVariant> list;
-				glGetUniformfvARB(m_program, param->location(), fvalue);
-				list << fvalue[0] << fvalue[1] << fvalue[2] << fvalue[3];
-				return list;
-			}
-			case GL_INT:
-			{
-				GLint ivalue[1];
-				glGetUniformivARB(m_program, param->location(), ivalue);
-				return (int)ivalue[0];
-			}
-			case GL_INT_VEC2_ARB:
-			{
-				GLint ivalue[2];
-				QList<QVariant> list;
-				glGetUniformivARB(m_program, param->location(), ivalue);
-				list << (int)ivalue[0] << (int)ivalue[1];
-				return list;
-			}
-			case GL_INT_VEC3_ARB:
-			{
-				GLint ivalue[3];
-				QList<QVariant> list;
-				glGetUniformivARB(m_program, param->location(), ivalue);
-				list << (int)ivalue[0] << (int)ivalue[1] << (int)ivalue[2];
-				return list;
-			}
-			case GL_INT_VEC4_ARB:
-			{
-				GLint ivalue[4];
-				QList<QVariant> list;
-				glGetUniformivARB(m_program, param->location(), ivalue);
-				list << (int)ivalue[0] << (int)ivalue[1] << (int)ivalue[2] << (int)ivalue[3];
-				return list;
-			}
-			case GL_BOOL_ARB:
-			{
-				GLint ivalue[1];
-				glGetUniformivARB(m_program, param->location(), ivalue);
-				return ivalue[0] != 0;
-			}
-			case GL_BOOL_VEC2_ARB:
-			{
-				GLint ivalue[2];
-				QList<QVariant> list;
-				glGetUniformivARB(m_program, param->location(), ivalue);
-				list << (ivalue[0] != 0) << (ivalue[1] != 0);
-				return list;
-			}
-			case GL_BOOL_VEC3_ARB:
-			{
-				GLint ivalue[3];
-				QList<QVariant> list;
-				glGetUniformivARB(m_program, param->location(), ivalue);
-				list << (ivalue[0] != 0) << (ivalue[1] != 0) << (ivalue[2] != 0);
-				return list;
-			}
-			case GL_BOOL_VEC4_ARB:
-			{
-				GLint ivalue[4];
-				QList<QVariant> list;
-				glGetUniformivARB(m_program, param->location(), ivalue);
-				list << (ivalue[0] != 0) << (ivalue[1] != 0) << (ivalue[2] != 0) << (ivalue[3] != 0);
-				return list;
-			}
-			case GL_FLOAT_MAT2_ARB:
-			{
-				GLfloat fvalue[2*2];
-				QList<QVariant> list;
-				glGetUniformfvARB(m_program, param->location(), fvalue);
-				for(int i = 0; i < 2*2; i++) {
-					list.append(fvalue[i]);
-				}
-				return list;
-			}
-			case GL_FLOAT_MAT3_ARB:
-			{
-				GLfloat fvalue[3*3];
-				QList<QVariant> list;
-				glGetUniformfvARB(m_program, param->location(), fvalue);
-				for(int i = 0; i < 3*3; i++) {
-					list.append(fvalue[i]);
-				}
-				return list;
-			}
-			case GL_FLOAT_MAT4_ARB:
-			{
-				GLfloat fvalue[4*4];
-				QList<QVariant> list;
-				glGetUniformfvARB(m_program, param->location(), fvalue);
-				for(int i = 0; i < 4*4; i++) {
-					list.append(fvalue[i]);
-				}
-				return list;
-			}
-			case GL_SAMPLER_1D_ARB:
-			case GL_SAMPLER_2D_ARB:
-			case GL_SAMPLER_3D_ARB:
-			case GL_SAMPLER_CUBE_ARB:
-			case GL_SAMPLER_2D_RECT_ARB:
-				return qVariantFromValue(GLTexture());
-			case GL_SAMPLER_1D_SHADOW_ARB:
-			case GL_SAMPLER_2D_SHADOW_ARB:
-			case GL_SAMPLER_2D_RECT_SHADOW_ARB:
-				break;
+			return list;
+		}
+		case GL_SAMPLER_1D_ARB:
+		case GL_SAMPLER_2D_ARB:
+		case GL_SAMPLER_3D_ARB:
+		case GL_SAMPLER_CUBE_ARB:
+		case GL_SAMPLER_2D_RECT_ARB:
+			return qVariantFromValue(GLTexture());
+		case GL_SAMPLER_1D_SHADOW_ARB:
+		case GL_SAMPLER_2D_SHADOW_ARB:
+		case GL_SAMPLER_2D_RECT_SHADOW_ARB:
+			break;
 		}
 
 		return QVariant();
@@ -1113,64 +1127,64 @@ private:
 	static QString getParameterAssignment(const GLSLParameter * param, const QDir & dir)
 	{
 		QString typeName = getTypeName(param->glType());
-		
-		switch( param->glType() ) {
-			case GL_FLOAT:
-			case GL_INT:
-			case GL_BOOL_ARB:
-				return typeName + " " + param->name() + " = " + param->value().toString() + ";\n";
-			case GL_FLOAT_VEC2_ARB:
-			case GL_FLOAT_VEC3_ARB:
-			case GL_FLOAT_VEC4_ARB:
-			case GL_INT_VEC2_ARB:
-			case GL_INT_VEC3_ARB:
-			case GL_INT_VEC4_ARB:
-			case GL_BOOL_VEC2_ARB:
-			case GL_BOOL_VEC3_ARB:
-			case GL_BOOL_VEC4_ARB:
-			case GL_FLOAT_MAT2_ARB:
-			case GL_FLOAT_MAT3_ARB:
-			case GL_FLOAT_MAT4_ARB:
-			{
-				QStringList list = param->value().toStringList();
-				QString value = list.join(", ");
-				return typeName + " " + param->name() + " = " + typeName + "(" + value + ");\n";
-			}
-			case GL_SAMPLER_1D_ARB:
-			case GL_SAMPLER_2D_ARB:
-			case GL_SAMPLER_3D_ARB:
-			case GL_SAMPLER_CUBE_ARB:
-			case GL_SAMPLER_2D_RECT_ARB:
-			case GL_SAMPLER_1D_SHADOW_ARB:
-			case GL_SAMPLER_2D_SHADOW_ARB:
-			case GL_SAMPLER_2D_RECT_SHADOW_ARB:
-			{
-				GLTexture tex = param->value().value<GLTexture>();
-				QString path = dir.relativeFilePath(tex.name());
-				return typeName + " " + param->name() + " = load(\"" + path + "\");\n";
-			}
+
+		switch (param->glType()) {
+		case GL_FLOAT:
+		case GL_INT:
+		case GL_BOOL_ARB:
+			return typeName + " " + param->name() + " = " + param->value().toString() + ";\n";
+		case GL_FLOAT_VEC2_ARB:
+		case GL_FLOAT_VEC3_ARB:
+		case GL_FLOAT_VEC4_ARB:
+		case GL_INT_VEC2_ARB:
+		case GL_INT_VEC3_ARB:
+		case GL_INT_VEC4_ARB:
+		case GL_BOOL_VEC2_ARB:
+		case GL_BOOL_VEC3_ARB:
+		case GL_BOOL_VEC4_ARB:
+		case GL_FLOAT_MAT2_ARB:
+		case GL_FLOAT_MAT3_ARB:
+		case GL_FLOAT_MAT4_ARB:
+		{
+			QStringList list = param->value().toStringList();
+			QString value = list.join(", ");
+			return typeName + " " + param->name() + " = " + typeName + "(" + value + ");\n";
 		}
-		
+		case GL_SAMPLER_1D_ARB:
+		case GL_SAMPLER_2D_ARB:
+		case GL_SAMPLER_3D_ARB:
+		case GL_SAMPLER_CUBE_ARB:
+		case GL_SAMPLER_2D_RECT_ARB:
+		case GL_SAMPLER_1D_SHADOW_ARB:
+		case GL_SAMPLER_2D_SHADOW_ARB:
+		case GL_SAMPLER_2D_RECT_SHADOW_ARB:
+		{
+			GLTexture tex = param->value().value<GLTexture>();
+			QString path = dir.relativeFilePath(tex.name());
+			return typeName + " " + param->name() + " = load(\"" + path + "\");\n";
+		}
+		}
+
 		return "";
 	}
-	
+
 
 	// Hacky parameter parser.
 	void parseParameter(QString line, const QDir & dir)
 	{
-		if( line.startsWith("//") ) {
+		if (line.startsWith("//")) {
 			// Skip C++ comments.
 			return;
 		}
 
 		static QRegExp paramRegExp("^\\s*(\\w+)\\s+(\\w+)\\s*=(.*);\\s*$");
 
-		if( !paramRegExp.exactMatch(line) ) {
+		if (!paramRegExp.exactMatch(line)) {
 			// @@ Display warning.
 			return;
 		}
 
-		QStringList tokens =  paramRegExp.capturedTexts();
+		QStringList tokens = paramRegExp.capturedTexts();
 		const int count = tokens.count();
 		Q_ASSERT(count == 4);
 
@@ -1178,32 +1192,32 @@ private:
 
 		QString value = tokens[3].trimmed();
 
-		if( param->glType() == GL_FLOAT ) {
+		if (param->glType() == GL_FLOAT) {
 			param->setValue(value.toDouble());
 		}
-		else if( param->glType() == GL_INT ) {
+		else if (param->glType() == GL_INT) {
 			param->setValue(value.toInt());
 		}
-		else if( param->glType() == GL_BOOL ) {
+		else if (param->glType() == GL_BOOL) {
 			param->setValue(value == "true");
 		}
-		else if( value.startsWith(tokens[1]) ) {
+		else if (value.startsWith(tokens[1])) {
 			int begin = value.indexOf("(");
 			int end = value.indexOf(")");
-			QStringList args = value.mid(begin+1, end-begin-1).split(",");
+			QStringList args = value.mid(begin + 1, end - begin - 1).split(",");
 
 			int baseType = getBaseType(param->glType());
 
 			// Convert the components.
 			QVariantList valueList;
 			foreach(QString arg, args) {
-				if( baseType == GL_FLOAT ) {
+				if (baseType == GL_FLOAT) {
 					valueList.append(arg.toDouble());
 				}
-				else if( baseType == GL_INT ) {
+				else if (baseType == GL_INT) {
 					valueList.append(arg.toInt());
 				}
-				else if( baseType == GL_BOOL ) {
+				else if (baseType == GL_BOOL) {
 					valueList.append(arg.trimmed() == "true");
 				}
 				else {	// @@ WTF ???
@@ -1212,24 +1226,24 @@ private:
 			}
 			param->setValue(valueList);
 		}
-		else if( param->isTexture())
+		else if (param->isTexture())
 		{
 			static QRegExp loadRegExp("^\\s*load\\(\"(.*)\"\\)\\s*$");
 
-			if( !loadRegExp.exactMatch(tokens[3]) ) {
+			if (!loadRegExp.exactMatch(tokens[3])) {
 				// @@ Display warning.
 				return;
 			}
 
 			QString fileName = loadRegExp.cap(1);
 			QString filePath = dir.absoluteFilePath(fileName);
-			
+
 			QFileInfo pathInfo(filePath);
 			if (!pathInfo.isFile() || !pathInfo.exists())
 			{
 				filePath = fileName;
 			}
-			
+
 			QVariant tex;
 			tex.setValue(GLTexture::open(filePath));
 			param->setValue(tex);
@@ -1275,11 +1289,11 @@ class GLSLEffectFactory : public EffectFactory
 	{
 		return true;
 	}
-	
+
 	virtual Effect * createEffect(QGLWidget * widget) const
 	{
 		Q_ASSERT(isSupported());
- 		return new GLSLEffect(this, widget);
+		return new GLSLEffect(this, widget);
 	}
 
 	QList<Highlighter::Rule> highlightingRules() const

@@ -52,8 +52,6 @@ typedef struct _CGstateassignment * CGstateassignment;
 typedef struct _CGannotation * CGannotation;
 typedef void *CGhandle;
 
-
-
 // Cg parameter classes.
 typedef enum
 v{

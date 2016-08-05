@@ -448,9 +448,8 @@ private:
 	{
 		CgFxEffect * m_effect;
 	public:
-		BuilderThread(QGLWidget * widget, CgFxEffect * effect) : GLThread(widget), m_effect(effect)
-		{
-		}
+		BuilderThread(QGLWidget * widget, CgFxEffect * effect) : GLThread(widget), m_effect(effect) { }
+
 		void run() 
 		{
 			this->makeCurrent();
@@ -634,6 +633,10 @@ public:
 	{
 #if defined(Q_OS_LINUX)
 		threaded = false;
+#endif
+
+#if WIN32
+		threaded = false; // Threaded mode does not work any more either (due to Qt 5.7 ???)
 #endif
 		
 		if (threaded) {

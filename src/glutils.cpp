@@ -22,6 +22,8 @@
 
 #include "glutils.h"
 
+#include <QtWidgets/QApplication>
+
 //#include <QtGui/QX11Info>
 
 //extern "C"
@@ -86,6 +88,7 @@ void GLThread::makeCurrent()
 {
 	//XLock lock;
 	//XLockDisplay(QX11Info::display());
+	m_glWidget->context()->moveToThread(this);
 	m_glWidget->makeCurrent();
 }
 
@@ -93,6 +96,7 @@ void GLThread::doneCurrent()
 {
 	//XLock lock;
 	m_glWidget->doneCurrent();
+	m_glWidget->context()->moveToThread(qApp->thread());
 	//XUnlockDisplay(QX11Info::display());
 }
 

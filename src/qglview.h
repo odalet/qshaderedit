@@ -48,6 +48,9 @@ public:
 	
 	void setScene(Scene * scene);
 
+	void pauseRendering();
+	void resumeRendering();
+
 	bool isWireframe() const;
 	bool isOrtho() const;
 	
@@ -58,6 +61,9 @@ public slots:
 	
 
 protected:
+
+	
+
 	void initializeGL();
 	void resizeGL(int w, int h);
 	void paintGL();	
@@ -89,6 +95,8 @@ private:
 	
 	bool m_wireframe;
 	bool m_ortho;
+
+	bool renderingIsPaused;
 };
 
 #endif // QGLVIEW_H

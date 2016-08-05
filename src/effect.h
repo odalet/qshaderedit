@@ -108,9 +108,12 @@ signals:
 	
 	void built(bool succeed);
 	
+protected:
+	QGLWidget * const m_widget;
+
 private:
 	EffectFactory const * const m_factory;
-	QGLWidget * const m_widget;
+	
 
 };
 
@@ -135,7 +138,6 @@ public:
 	static void removeFactory(const EffectFactory * factory);
 };
 
-
 #define REGISTER_EFFECT_FACTORY(Factory) \
 	namespace { \
 		static Factory factory; \
@@ -145,7 +147,5 @@ public:
 		}; \
 		static Factory##Registrar registrar; \
 	}
-
-
 
 #endif // EFFECT_H

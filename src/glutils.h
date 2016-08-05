@@ -57,13 +57,15 @@ protected:
 /// A thread that wraps a dummy GL context. 
 class GLThread : public QThread
 {
+protected:
 	QGLWidget * m_glWidget;
 	
 public:
-	GLThread(QGLWidget * shareWidget)
+	GLThread(QGLWidget* shareWidget)
 	{
 		m_glWidget = new QGLWidget(NULL, shareWidget);
 	}
+
 	~GLThread()
 	{
 		delete m_glWidget;
