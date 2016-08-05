@@ -45,8 +45,8 @@ public:
 	
 	void setEffect(Effect * effect);
 	
-	QTextEdit * addEditor(const QString & name, const Effect * effect, int i);
-	QTextEdit * currentTextEdit() const;
+	QTextEdit* addEditor(const QString & name, const Effect * effect, int i);
+	QTextEdit* currentTextEdit() const;
 
 	int line() const;
 	int column() const;
@@ -100,7 +100,6 @@ private:
 	QTextDocument::FindFlags lastSearchOptions;
 	
 };
-
 
 class SourceEdit : public QTextEdit
 {

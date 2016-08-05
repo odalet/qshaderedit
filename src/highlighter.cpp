@@ -1,20 +1,20 @@
 /*
-    QShaderEdit - Simple multiplatform shader editor
-    Copyright (C) 2007 Ignacio Castaño <castano@gmail.com>
+	QShaderEdit - Simple multiplatform shader editor
+	Copyright (C) 2007 Ignacio Castaño <castano@gmail.com>
 
-    This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation; either version 2 of the License, or
-    (at your option) any later version.
+	This program is free software; you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation; either version 2 of the License, or
+	(at your option) any later version.
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+	You should have received a copy of the GNU General Public License
+	along with this program; if not, write to the Free Software
+	Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
 #include "highlighter.h"
@@ -24,26 +24,14 @@
 // static
 QVector<QTextCharFormat> Highlighter::s_formats;
 
-Highlighter::Highlighter(QTextDocument* parent): QSyntaxHighlighter(parent)
+Highlighter::Highlighter(QTextDocument* parent) : QSyntaxHighlighter(parent)
 {
-	if (s_formats.size() == 0)
-		createFormats();
+	if (s_formats.size() == 0) createFormats();
 }
 
-void Highlighter::setRules(const QList<Rule>& rules)
-{
-	m_rules = rules;
-}
-
-void Highlighter::setMultiLineCommentStart(const QString& s)
-{
-	m_multiLineCommentStart = s;
-}
-
-void Highlighter::setMultiLineCommentEnd(const QString& s)
-{
-	m_multiLineCommentEnd = s;
-}
+void Highlighter::setRules(const QList<Rule>& rules) { m_rules = rules; }
+void Highlighter::setMultiLineCommentStart(const QString& s) { m_multiLineCommentStart = s; }
+void Highlighter::setMultiLineCommentEnd(const QString& s) { m_multiLineCommentEnd = s; }
 
 // static
 void Highlighter::createFormats()
@@ -86,7 +74,7 @@ void Highlighter::createFormats()
 	format.setForeground(Qt::darkYellow);
 	s_formats[Misc] = format;
 #else
-	
+
 	format.setForeground(Qt::darkBlue);
 	format.setFontWeight(QFont::Bold);
 	s_formats[Keyword] = format;
@@ -112,7 +100,7 @@ void Highlighter::createFormats()
 	format.setFontItalic(true);
 	format.setForeground(Qt::gray);
 	s_formats[Comment] = format;
-	
+
 	format.setFontItalic(false);
 	format.setForeground(Qt::darkYellow);
 	s_formats[Misc] = format;
@@ -121,7 +109,7 @@ void Highlighter::createFormats()
 
 void Highlighter::highlightBlock(const QString& text)
 {
-	foreach (Rule rule, m_rules)
+	foreach(Rule rule, m_rules)
 	{
 		int index = text.indexOf(rule.pattern);
 		while (index >= 0)
@@ -146,7 +134,8 @@ void Highlighter::highlightBlock(const QString& text)
 			if (endIndex == -1) {
 				setCurrentBlockState(1);
 				commentLength = text.length() - startIndex;
-			} else {
+			}
+			else {
 				commentLength = endIndex - startIndex + m_multiLineCommentStart.length();
 			}
 			setFormat(startIndex, commentLength, s_formats[Comment]);
