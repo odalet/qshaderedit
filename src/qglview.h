@@ -25,7 +25,7 @@
 #include <GL/glew.h>
 
 #include <QtOpenGL/QGLWidget>
-
+#include <QtGui/QColor>
 
 class QRectF;
 class QWheelEvent;
@@ -37,6 +37,7 @@ class Scene;
 class SceneView : public QGLWidget
 {
 	Q_OBJECT
+
 public:
 	SceneView(QWidget * parent, QGLWidget * shareWidget);
 	virtual ~SceneView();
@@ -53,17 +54,14 @@ public:
 
 	bool isWireframe() const;
 	bool isOrtho() const;
+	QColor backgroundColor() const;
+	void setBackgroundColor(QColor color);
 	
-public slots:
-	
+public slots:	
 	void setWireframe(bool b);	
 	void setOrtho(bool b);
-	
 
 protected:
-
-	
-
 	void initializeGL();
 	void resizeGL(int w, int h);
 	void paintGL();	
@@ -81,22 +79,19 @@ protected:
 	void resetTransform();
 	
 private:
-	
+	bool m_wireframe;
+	bool m_ortho;
+	bool renderingIsPaused;
+	QColor sceneBackgroundColor;
+
 	float m_alpha;
 	float m_beta;
 	float m_x, m_y, m_z;
 	Qt::MouseButton m_button;
 	
-	QPoint m_pos;
-	
-	Effect * m_effect;
-	
-	Scene * m_scene;
-	
-	bool m_wireframe;
-	bool m_ortho;
-
-	bool renderingIsPaused;
+	QPoint m_pos;	
+	Effect * m_effect;	
+	Scene * m_scene;	
 };
 
 #endif // QGLVIEW_H

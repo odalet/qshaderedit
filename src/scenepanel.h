@@ -32,36 +32,33 @@ class SceneView;
 class ScenePanel : public QDockWidget
 {
 	Q_OBJECT
-public:
 
+public:
 	ScenePanel(const QString & title, QWidget * parent = 0, QGLWidget * shareWidget = 0, Qt::WindowFlags flags = 0);
 	~ScenePanel();
 
 	void setEffect(Effect * effect);
 	
-	QMenu * menu();
+	QMenu* menu() const;
 	
 	void setViewUpdatesEnabled(bool enable);
 	
 	void startAnimation();
-	void stopAnimation();
+	void stopAnimation();	
 	
-	
-public slots:
-	
+public slots:	
 	void refresh();
 	void selectScene();	
 	
 private:
-
-	SceneView * m_view;
-	QTimer * m_animationTimer;
+	SceneView* m_view;
+	QTimer* m_animationTimer;
 	
-	QMenu * m_sceneMenu;
-	QMenu * m_renderMenu;
-	QAction * m_wireframeAction;
-	QAction * m_orthoAction;
-	
+	QMenu* m_sceneMenu;
+	QMenu* m_renderMenu;
+	QAction* m_wireframeAction;
+	QAction* m_orthoAction;
+	QAction* sceneBackgroundAction;
 };
 
 

@@ -107,6 +107,9 @@
     <Filter Include="Services">
       <UniqueIdentifier>{3fea7b98-d5ca-4869-b964-507e1e000640}</UniqueIdentifier>
     </Filter>
+    <Filter Include="UI\GLView">
+      <UniqueIdentifier>{a99e6743-66e3-4032-bcc5-408a871b0fda}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Debug\moc_document.cpp">
@@ -274,9 +277,6 @@
     <ClCompile Include="parameterdelegate.cpp">
       <Filter>_to_sort\Source Files\Parameters</Filter>
     </ClCompile>
-    <ClCompile Include="qglview.cpp">
-      <Filter>_to_sort\Source Files\GL</Filter>
-    </ClCompile>
     <ClCompile Include="scenepanel.cpp">
       <Filter>_to_sort\Source Files\GL</Filter>
     </ClCompile>
@@ -298,6 +298,9 @@
     </ClCompile>
     <ClCompile Include="services.cpp">
       <Filter>Services</Filter>
+    </ClCompile>
+    <ClCompile Include="qglview.cpp">
+      <Filter>UI\GLView</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -390,9 +393,6 @@
     <CustomBuild Include="parameterdelegate.h">
       <Filter>_to_sort\Header Files\Parameters</Filter>
     </CustomBuild>
-    <CustomBuild Include="qglview.h">
-      <Filter>_to_sort\Header Files\GL</Filter>
-    </CustomBuild>
     <CustomBuild Include="editor.h">
       <Filter>_to_sort\Header Files\Document</Filter>
     </CustomBuild>
@@ -404,6 +404,9 @@
     </CustomBuild>
     <CustomBuild Include="qshaderedit.h">
       <Filter>UI\MainWindow</Filter>
+    </CustomBuild>
+    <CustomBuild Include="qglview.h">
+      <Filter>UI\GLView</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

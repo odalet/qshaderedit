@@ -572,26 +572,6 @@ void QShaderEdit::createMenus()
 		themeActions.insert(pair<ThemeKey, QAction*>(key, themeAction));
 	}
 
-	/*auto lightThemeAction = themeMenu->addAction(tr("Light"));
-	lightThemeAction->setCheckable(true);
-	connect(lightThemeAction, &QAction::changed, [=]()
-	{
-		if (lightThemeAction->isChecked())
-			services::themeManager->switchTheme(Light);
-	});
-
-	auto darkThemeAction = themeMenu->addAction(tr("Dark"));
-	darkThemeAction->setCheckable(true);
-	connect(darkThemeAction, &QAction::changed, [=]()
-	{
-		if (darkThemeAction->isChecked())
-			services::themeManager->switchTheme(Dark);
-	});*/
-
-
-	//themesGroup->addAction(lightThemeAction);
-	//themesGroup->addAction(darkThemeAction);
-
 	connect(services::themeManager, &ThemeManager::changed, [=]() { updateCheckedTheme(); });
 	updateCheckedTheme();
 

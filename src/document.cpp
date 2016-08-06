@@ -1,20 +1,20 @@
 /*
-    QShaderEdit - Simple multiplatform shader editor
-    Copyright (C) 2007 Ignacio Castaño <castano@gmail.com>
+	QShaderEdit - Simple multiplatform shader editor
+	Copyright (C) 2007 Ignacio Castaño <castano@gmail.com>
 
-    This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation; either version 2 of the License, or
-    (at your option) any later version.
+	This program is free software; you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation; either version 2 of the License, or
+	(at your option) any later version.
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+	You should have received a copy of the GNU General Public License
+	along with this program; if not, write to the Free Software
+	Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
 #include "document.h"
@@ -33,7 +33,7 @@ namespace
 	{
 		return QFileInfo(fileName).fileName();
 	}
-	
+
 	static QString strippedName(const QFile & file)
 	{
 		return QFileInfo(file).fileName();
@@ -60,10 +60,10 @@ QString Document::s_lastEffect;
 Document::Document(QGLWidget * glWidget, QWidget * parent/*= 0*/) : QObject(parent)
 {
 	Q_ASSERT(glWidget != NULL);
-	
+
 	m_glWidget = glWidget;
 	m_owner = parent;
-	
+
 	m_effectFactory = NULL;
 	m_file = NULL;
 	m_effect = NULL;
@@ -96,7 +96,7 @@ void Document::setModified(bool m)
 QString Document::fileName() const
 {
 	QString fileName;
-	
+
 	if (m_file != NULL)
 	{
 		fileName = strippedName(*m_file);
@@ -106,7 +106,7 @@ QString Document::fileName() const
 		QString fileExtension = m_effectFactory->extension();
 		fileName = tr("untitled") + "." + fileExtension;
 	}
-	
+
 	return fileName;
 }
 
@@ -114,7 +114,7 @@ QString Document::fileName() const
 QString Document::title() const
 {
 	QString title;
-	
+
 	if (m_file == NULL)
 	{
 		title = tr("Untitled");
@@ -129,7 +129,7 @@ QString Document::title() const
 		title.append(" ");
 		title.append(tr("[modified]"));
 	}
-	
+
 	return title;
 }
 
@@ -137,10 +137,10 @@ QString Document::title() const
 bool Document::canLoadFile(const QString & fileName) const
 {
 	int idx = fileName.lastIndexOf('.');
-	QString fileExtension = fileName.mid(idx+1);
+	QString fileExtension = fileName.mid(idx + 1);
 
 	const EffectFactory * effectFactory = EffectFactory::factoryForExtension(fileExtension);
-	
+
 	return (effectFactory != NULL) && m_effectFactory->isSupported();
 }
 
@@ -151,7 +151,7 @@ bool Document::loadFile(const QString & fileName)
 		// User cancelled the operation.
 		return false;
 	}
-	
+
 	delete m_file;
 	m_file = new QFile(fileName);
 	if (!m_file->open(QIODevice::ReadOnly))
@@ -166,35 +166,29 @@ bool Document::loadFile(const QString & fileName)
 	m_modified = false;
 
 	int idx = fileName.lastIndexOf('.');
-	QString fileExtension = fileName.mid(idx+1);
+	QString fileExtension = fileName.mid(idx + 1);
 
 	m_effectFactory = EffectFactory::factoryForExtension(fileExtension);
-	if (m_effectFactory != NULL)
-	{
-		Q_ASSERT(m_effectFactory->isSupported());
-		m_effect = m_effectFactory->createEffect(m_glWidget);
-		Q_ASSERT(m_effect != NULL);
-		
-		connect(m_effect, SIGNAL(built(bool)), this, SIGNAL(effectBuilt(bool)));
-		
-		m_effect->load(m_file);
-		
-		emit effectCreated();
-		
-		build(false);
-	}
-	else
-	{
-		// @@ Can this happen?
-	}
+	Q_ASSERT(m_effectFactory != NULL);
+	Q_ASSERT(m_effectFactory->isSupported());
+	m_effect = m_effectFactory->createEffect(m_glWidget);
+	Q_ASSERT(m_effect != NULL);
+
+	connect(m_effect, SIGNAL(built(bool)), this, SIGNAL(effectBuilt(bool)));
+
+	m_effect->load(m_file);
+
+	emit effectCreated();
+
+	build(false);
 
 	m_file->close();
-	
+
 	emit titleChanged(title());
-	
+
 	s_lastEffect = fileName;	// @@ Move this somewhere else!
 	emit fileNameChanged(fileName);
-	
+
 	QApplication::restoreOverrideCursor();
 	return true;
 }
@@ -208,7 +202,7 @@ void Document::reset(bool startup)
 	int count = 0;
 	foreach(const EffectFactory * ef, effectFactoryList)
 	{
-		if(ef->isSupported()) {
+		if (ef->isSupported()) {
 			++count;
 		}
 	}
@@ -219,11 +213,11 @@ void Document::reset(bool startup)
 		// Display error.
 		QMessageBox::critical(m_owner, tr("Error"), tr("No effect files supported"), QMessageBox::Ok, QMessageBox::NoButton, QMessageBox::NoButton);
 	}
-	else if(count == 1)
+	else if (count == 1)
 	{
 		// Use the first supported effect type.
 		foreach(const EffectFactory * ef, effectFactoryList) {
-			if(ef->isSupported()) {
+			if (ef->isSupported()) {
 				effectFactory = ef;
 				break;
 			}
@@ -233,14 +227,14 @@ void Document::reset(bool startup)
 	{
 		// Let the user choose the effect type.
 		NewDialog newDialog(m_owner, startup);
-		
+
 		int result = newDialog.exec();
 		if (result == QDialog::Accepted)
 		{
 			QString selection = newDialog.shaderType();
-			
+
 			foreach(const EffectFactory * ef, effectFactoryList) {
-				if(ef->isSupported() && ef->name() == selection) {
+				if (ef->isSupported() && ef->name() == selection) {
 					effectFactory = ef;
 					break;
 				}
@@ -263,13 +257,13 @@ void Document::open()
 	// Find supported effect types.
 	QStringList effectTypes;
 	QStringList effectExtensions;
-	foreach (const EffectFactory * factory, EffectFactory::factoryList())
+	foreach(const EffectFactory * factory, EffectFactory::factoryList())
 	{
 		if (factory->isSupported())
 		{
 			QString effectType = QString("%1 (*.%2)").arg(factory->namePlural()).arg(factory->extension());
 			effectTypes.append(effectType);
-			
+
 			QString effectExtension = factory->extension();
 			effectExtensions.append("*." + effectExtension);
 		}
@@ -283,11 +277,11 @@ void Document::open()
 
 	//QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"), tr("."), effectTypes.join(";"));
 	QString fileName = QFileDialog::getOpenFileName(m_owner, tr("Open File"),
-            s_lastEffect, QString(tr("Effect Files (%1)")).arg(effectExtensions.join(" ")));
+		s_lastEffect, QString(tr("Effect Files (%1)")).arg(effectExtensions.join(" ")));
 
 	if (!fileName.isEmpty())
 	{
-        loadFile(fileName);
+		loadFile(fileName);
 	}
 }
 
@@ -300,11 +294,11 @@ bool Document::save()
 		QString fileExtension = m_effectFactory->extension();
 		QString effectType = QString("%1 (*.%2)").arg(m_effectFactory->namePlural()).arg(fileExtension);
 		QString fileName = QFileDialog::getSaveFileName(m_owner, tr("Save File"), tr("untitled") + "." + fileExtension, effectType);
-		
-		if( fileName.isEmpty() ) {
+
+		if (fileName.isEmpty()) {
 			return false;
 		}
-		
+
 		m_file = new QFile(fileName);
 	}
 
@@ -322,7 +316,7 @@ void Document::saveAs()
 	// Choose file dialog.
 	QString fileName = QFileDialog::getSaveFileName(m_owner, tr("Save File"), this->fileName(), effectType);
 
-	if( fileName.isEmpty() ) {
+	if (fileName.isEmpty()) {
 		return;
 	}
 
@@ -331,7 +325,7 @@ void Document::saveAs()
 
 	// @@ Check for errors.
 	saveEffect();
-	
+
 	// @@ Emit only when file name actually changed.
 	emit fileNameChanged(fileName);
 }
@@ -357,15 +351,15 @@ bool Document::close()
 			QString extension = m_effectFactory->extension();
 			fileName = tr("untitled") + "." + extension;
 		}
-		
+
 		while (true)
 		{
-			int answer = QMessageBox::question(m_owner, tr("Save modified files"), tr("Do you want to save '%1' before closing?").arg(fileName), 
+			int answer = QMessageBox::question(m_owner, tr("Save modified files"), tr("Do you want to save '%1' before closing?").arg(fileName),
 				QMessageBox::Yes, QMessageBox::No, QMessageBox::Cancel);
-			
+
 			if (answer == QMessageBox::Yes)
 			{
-				if( save() ) {
+				if (save()) {
 					break;
 				}
 			}
@@ -379,11 +373,11 @@ bool Document::close()
 			}
 		}
 	}
-	
+
 	emit effectDeleted();
-	
-	closeEffect();	
-	
+
+	closeEffect();
+
 	return true;
 }
 
@@ -391,10 +385,10 @@ bool Document::close()
 void Document::build(bool threaded /*= true*/)
 {
 	Q_ASSERT(m_effect != NULL);
-	
+
 	emit synchronizeEditors();
 	emit effectBuilding();
-	
+
 	m_effect->build(threaded);
 }
 
@@ -402,7 +396,7 @@ void Document::build(bool threaded /*= true*/)
 void Document::onParameterChanged()
 {
 	Q_ASSERT(m_effectFactory != NULL);
-	
+
 	if (m_effectFactory->savesParameters() && !isModified())
 	{
 		setModified(true);
@@ -427,12 +421,12 @@ void Document::newEffect(const EffectFactory * effectFactory)
 	Q_ASSERT(m_effect != NULL);
 
 	connect(m_effect, SIGNAL(built(bool)), this, SIGNAL(effectBuilt(bool)));
-	
+
 	m_modified = false;
-	
+
 	emit effectCreated();
 	emit titleChanged(title());
-	
+
 	build(false);
 
 	QApplication::restoreOverrideCursor();
@@ -442,21 +436,21 @@ void Document::newEffect(const EffectFactory * effectFactory)
 bool Document::saveEffect()
 {
 	m_file->open(QIODevice::WriteOnly);
-	
+
 	// Synchronize before save.
 	emit synchronizeEditors();
 	m_effect->save(m_file);
-	
+
 	m_file->close();
 
 	setModified(false);
 
 	emit titleChanged(title());
-	
+
 	//updateActions();				// qshaderedit listens to modifiedChanged
 
 	// ODT
-	return true; 
+	return true;
 }
 
 
@@ -465,7 +459,7 @@ void Document::closeEffect()
 	// Delete effect.
 	delete m_effect;
 	m_effect = NULL;
-	
+
 	delete m_file;
 	m_file = NULL;
 }

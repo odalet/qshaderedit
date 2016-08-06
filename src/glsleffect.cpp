@@ -66,9 +66,9 @@ namespace {
 		"}\n";
 
 	// GLSL shader file tags.
-	static const char * s_vertexShaderTag = "[VertexShader]\n";
-	static const char * s_fragmentShaderTag = "[FragmentShader]\n";
-	static const char * s_parametersTag = "[Parameters]\n";
+	static const char* s_vertexShaderTag = "[VertexShader]";
+	static const char* s_fragmentShaderTag = "[FragmentShader]";
+	static const char* s_parametersTag = "[Parameters]";
 
 	static QString getTypeName(GLint type)
 	{
@@ -369,10 +369,9 @@ public:
 		delete m_outputParser;
 		qDeleteAll(m_parameterArray);
 	}
-
-
+	
 	// Load the effect from the given file.
-	virtual void load(QFile * file)
+	virtual void load(QFile* file)
 	{
 		Q_ASSERT(file != NULL);
 
@@ -380,45 +379,44 @@ public:
 		m_fragmentShaderText.clear();
 
 		this->makeCurrent();
-
 		QDir dir = QFileInfo(*file).dir();
 
 		QByteArray line;
-		while (!file->atEnd()) {
-
-			if (line.startsWith(s_vertexShaderTag)) {
+		while (!file->atEnd()) 
+		{
+			if (line.startsWith(s_vertexShaderTag))
+			{
 				// Read vertex shader.
-				while (!file->atEnd()) {
+				while (!file->atEnd()) 
+				{
 					line = file->readLine();
-					if (line.startsWith('[')) {
-						break;
-					}
+					if (line.startsWith('[')) break;
 					m_vertexShaderText.push_back(line);
 				}
 
 				continue;
 			}
 
-			if (line.startsWith(s_fragmentShaderTag)) {
+			if (line.startsWith(s_fragmentShaderTag)) 
+			{
 				// Read fragment shader.
-				while (!file->atEnd()) {
+				while (!file->atEnd()) 
+				{
 					line = file->readLine();
-					if (line.startsWith('[')) {
-						break;
-					}
+					if (line.startsWith('[')) break;
 					m_fragmentShaderText.push_back(line);
 				}
 
 				continue;
 			}
 
-			if (line.startsWith(s_parametersTag)) {
-				// Parse parameters.
-				while (!file->atEnd()) {
+			if (line.startsWith(s_parametersTag)) 			
+			{
+				// Read parameters.
+				while (!file->atEnd())
+				{
 					line = file->readLine();
-					if (line.startsWith('[')) {
-						break;
-					}
+					if (line.startsWith('[')) break;
 					// Parse parameter->
 					parseParameter(line, dir);
 				}
