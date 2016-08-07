@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QShaderEdit", "src\QShaderEdit.vcxproj", "{05287B3B-9110-3BB7-918A-0349D7379FEC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{653C5C22-8C49-4D47-B0B8-2EDCD6A517C7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tests", "tests\src\tests.vcxproj", "{3C240C72-6CAD-4092-B205-B11242A1F1A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,9 +25,18 @@ Global
 		{05287B3B-9110-3BB7-918A-0349D7379FEC}.Release|x64.Build.0 = Release|x64
 		{05287B3B-9110-3BB7-918A-0349D7379FEC}.Release|x86.ActiveCfg = Release|Win32
 		{05287B3B-9110-3BB7-918A-0349D7379FEC}.Release|x86.Build.0 = Release|Win32
+		{3C240C72-6CAD-4092-B205-B11242A1F1A1}.Debug|x64.ActiveCfg = Debug|Win32
+		{3C240C72-6CAD-4092-B205-B11242A1F1A1}.Debug|x86.ActiveCfg = Debug|Win32
+		{3C240C72-6CAD-4092-B205-B11242A1F1A1}.Debug|x86.Build.0 = Debug|Win32
+		{3C240C72-6CAD-4092-B205-B11242A1F1A1}.Release|x64.ActiveCfg = Release|Win32
+		{3C240C72-6CAD-4092-B205-B11242A1F1A1}.Release|x86.ActiveCfg = Release|Win32
+		{3C240C72-6CAD-4092-B205-B11242A1F1A1}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3C240C72-6CAD-4092-B205-B11242A1F1A1} = {653C5C22-8C49-4D47-B0B8-2EDCD6A517C7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		Qt5Version = msvc2015_64

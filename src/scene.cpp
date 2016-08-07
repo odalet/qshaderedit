@@ -120,8 +120,6 @@ public:
 
 REGISTER_SCENE_FACTORY(TeapotSceneFactory);
 
-
-
 class QuadScene : public DisplayListScene
 {
 public:
