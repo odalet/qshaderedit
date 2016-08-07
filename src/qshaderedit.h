@@ -39,8 +39,8 @@ class ParameterPanel;
 class ScenePanel;
 class Editor;
 class Document;
-struct Effect;
-struct EffectFactory;
+class Effect;
+class EffectFactory;
 
 using namespace std;
 using namespace theming;

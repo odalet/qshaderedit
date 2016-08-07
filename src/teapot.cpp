@@ -73,6 +73,7 @@
 
 #include <GL/glew.h>
 
+#define _unused(x) (void)x; // We won't include qtglobal.h just for this...
 
 /* -- PRIVATE FUNCTIONS ---------------------------------------------------- */
 
@@ -180,6 +181,7 @@ static double tex[2][2][2] =
 
 static void teapot( GLint grid, GLdouble scale, GLenum type )
 {
+	_unused(scale);
 	double p[4][4][3], q[4][4][3], r[4][4][3], s[4][4][3];
 	long i, j, k, l;
 

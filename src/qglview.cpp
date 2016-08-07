@@ -69,6 +69,8 @@ void SceneView::setBackgroundColor(QColor color)
 	makeCurrent();
 	glClearColor(sceneBackgroundColor);
 	doneCurrent();
+
+	updateMatrices();
 	emit updateGL();
 }
 
@@ -215,10 +217,8 @@ void SceneView::updateMatrices()
 	glLoadIdentity();
 
 	auto aspect = float(width()) / float(height());
-	if (m_ortho)
-		ortho(aspect, m_z);
-	else 
-		perspective(30, aspect, 0.3, 50);
+	if (m_ortho) ortho(aspect, m_z);
+	else perspective(30.0f, aspect, 0.3f, 50.0f);
 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
@@ -258,7 +258,7 @@ void SceneView::mouseMoveEvent(QMouseEvent *event)
 		(m_button == Qt::LeftButton && event->modifiers() == Qt::ShiftModifier))
 	{
 		m_z -= (m_z * (pos - m_pos).y()) / height();
-		if (m_z < 0.00001) m_z = 0.00001;
+		if (m_z < 0.00001f) m_z = 0.00001f;
 	}
 
 	m_pos = pos;

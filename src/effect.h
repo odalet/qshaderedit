@@ -51,19 +51,13 @@ public:
 		EditorType_File
 	};
 	
-	Effect(const EffectFactory * factory, QGLWidget * widget) : m_factory(factory), m_widget(widget)
-	{
-	}
+	Effect(const EffectFactory* factory, QGLWidget * widget) : m_factory(factory), m_widget(widget) { }
 	
-	const EffectFactory * factory() const
-	{
-		return m_factory;
-	}
+	const EffectFactory* factory() const { return m_factory; }
 	
 	void makeCurrent();
 	void doneCurrent();
-	
-	
+		
 	// Load/Save the effect.
 	virtual void load(QFile * file) = 0;
 	virtual void save(QFile * file) = 0;
@@ -113,8 +107,6 @@ protected:
 
 private:
 	EffectFactory const * const m_factory;
-	
-
 };
 
 class EffectFactory : public QObject

@@ -1,13 +1,19 @@
 This is a fork of [https://github.com/magicafe/qshaderedit](https://github.com/magicafe/qshaderedit)
 The differences are:
 
-* Only targets Windows (x86 only for now) and Qt 5.7. As such,
-	* CMake and Linux supports were dropped (no more CMakeLists.txt not #if Linux in code)
+* Only targets Windows (x86/x64) and Qt 5.7. As such,
+	* CMake support was dropped;
+	* Linux / OSX support is not tested nor guaranteed anymore.
 * Code layout was modified and many files were deleted.
-* Currently build with Visual Studio 2015.
+* Currently build with Visual Studio 2015 with Qt5 Plugin.
 * Depends on Qt 5.7 (built against VS 2015 x86 runtime).
- 
-**NB**: all development is made in the `qt5_vs2015` branch. `master` was left untouched (apart from this readme).  
+
+# Dependencies
+
+* Visual Studio 2015
+* Qt 5.7 (for VS2015 x86 and/or VS2015 x64)
+* Qt5 Plugin for VS2015. Download [here](https://visualstudiogallery.msdn.microsoft.com/c89ff880-8509-47a4-a262-e4fa07168408).
+* Glew 2.0: [http://glew.sourceforge.net/](http://glew.sourceforge.net/)
 
 ----
 Original README:

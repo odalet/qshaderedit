@@ -48,6 +48,7 @@ int main(int argc, char **argv)
 	}
 
 	QShaderEdit* shaderEdit = new QShaderEdit(filename);
+	Q_UNUSED(shaderEdit);
 
 	auto rc = app.exec();
 	services::dispose();

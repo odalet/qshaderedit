@@ -121,7 +121,6 @@ class parsingFile
 
 		const char* getNextToken();
 };
-		
 
 class md5Scene : public Scene
 {
@@ -150,5 +149,29 @@ class md5Scene : public Scene
 		}
 
 };
+
+class md5SceneFactory : public SceneFactory
+{
+public:
+	virtual QString name() const
+	{
+		return tr("md5");
+	}
+	virtual QString description() const
+	{
+		return tr("md5");
+	}
+	virtual QIcon icon() const
+	{
+		return QIcon();
+	}
+	virtual Scene * createScene() const
+	{
+		return new md5Scene();
+	}
+};
+
+REGISTER_SCENE_FACTORY(md5SceneFactory);
+
 
 #endif

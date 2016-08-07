@@ -412,6 +412,8 @@ namespace {
 	
 	static void errorHandler(CGcontext ctx, CGerror err, void *data)
 	{
+		Q_UNUSED(ctx);
+		Q_UNUSED(data);
 		fprintf(stderr, "Cg error: %s\n", qcgGetErrorString(err));
 		fflush(stderr);
 	}
